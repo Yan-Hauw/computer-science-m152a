@@ -6,8 +6,10 @@ module tb;
    reg       clk;
    reg       btnS;
    reg       btnR;
-   
+   reg [7:0] instructions [0:1024];
    integer   i;
+   integer name;
+   integer k;
    
    /*AUTOWIRE*/
    // Beginning of automatic wires (for undeclared instantiated-module outputs)
@@ -18,7 +20,7 @@ module tb;
 
    initial
      begin
-        //$shm_open  ("dump", , ,1);
+     //$shm_open  ("dump", , ,1);
         //$shm_probe (tb, "ASTF");
 
         clk = 0;
@@ -27,16 +29,21 @@ module tb;
         #1000 btnR = 0;
         #1500000;
         
-        tskRunPUSH(0,4);
-        tskRunPUSH(0,0);
-        tskRunPUSH(1,3);
-        tskRunMULT(0,1,2);
-        tskRunADD(2,0,3);
-        tskRunSEND(0);
-        tskRunSEND(1);
-        tskRunSEND(2);
-        tskRunSEND(3);
-        
+        $readmemb("seq.code", instructions);
+        k = 1;
+        while(k <= instructions[0]) begin //TODO
+//        tskRunPUSH(0,4);
+//        tskRunPUSH(0,0);
+//        tskRunPUSH(1,3);
+//        tskRunMULT(0,1,2);
+//        tskRunADD(2,0,3);
+//        tskRunSEND(0);
+//        tskRunSEND(1);
+//        tskRunSEND(2);
+//        tskRunSEND(3);
+        tskRunInst(instructions[k]);
+        //k <= k + 1;
+        end
         #1000;        
         $finish;
      end

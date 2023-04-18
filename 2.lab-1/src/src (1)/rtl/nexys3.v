@@ -73,7 +73,7 @@ module nexys3 (/*AUTOARG*/
      else
        begin
           clk_dv   <= clk_dv_inc[16:0];
-          clk_en   <= clk_dv_inc[17];
+          clk_en   <= clk_dv_inc[16];
           clk_en_d <= clk_en;
        end
    

@@ -15,6 +15,8 @@ module model_uart(/*AUTOARG*/
    parameter name    = "UART0";
    
    reg [7:0] rxData;
+   reg [31:0] rxDataConcat;
+   //reg [1:0] counter;
    event     evBit;
    event     evByte;
    event     evTxBit;
@@ -24,6 +26,7 @@ module model_uart(/*AUTOARG*/
    initial
      begin
         TX = 1'b1;
+        //counter = 0;
      end
    
    always @ (negedge RX)
@@ -37,7 +40,16 @@ module model_uart(/*AUTOARG*/
              rxData[7:0] = {RX,rxData[7:1]};
           end
         ->evByte;
-        $display ("%d %s Received byte %02x (%s)", $stime, name, rxData, rxData);
+        if(rxData == 13) begin
+          $display ("%d %s Received %08x (%s)", $stime, name, rxDataConcat, rxDataConcat);
+        end else if(rxData != 10) begin
+          rxDataConcat[31:0] = {rxDataConcat[23:0], rxData};
+        end
+        //counter = counter + 1;
+        //if (counter == 0) begin
+        //  $display ("%d %s Received byte %08x", $stime, name, rxDataConcat);
+        //  counter = 1;
+        // end;
      end
 
    task tskRxData;
