@@ -38,112 +38,73 @@ module clock(
    
    // Logic
    input        clk;                  // 100MHz
+   reg clkCOUNTER;
+   reg clkADJ;
+   reg clkBLINKING;
+   reg clkDISPLAY;
    
-   /*AUTOWIRE*/
-   // Beginning of automatic wires (for undeclared instantiated-module outputs)
-   wire [seq_dp_width-1:0] seq_tx_data;         // From seq_ of seq.v
-   wire                 seq_tx_valid;           // From seq_ of seq.v
-   wire [7:0]           uart_rx_data;           // From uart_top_ of uart_top.v
-   wire                 uart_rx_valid;          // From uart_top_ of uart_top.v
-   wire                 uart_tx_busy;           // From uart_top_ of uart_top.v
-   // End of automatics
+   integer master_clk_counter;
    
-   wire        rst;
-   wire        arst_i;
-   reg [26:0] clk_dv_inc;
-
-   reg [1:0]   arst_ff;
-   reg [25:0]  clk_dv;
+   wire [17:0] clk_dv_inc;
+   reg [16:0]  clk_dv;
    reg         clk_en;
-   reg         clk_en_d;
-      
-   reg [7:0]   inst_wd;
-   reg         inst_vld;
-   reg [2:0]   step_d;
 
-   reg [7:0]   inst_cnt;
+   wire swADJ;
+   wire swSEL;
+   wire buttonRESET;
+   wire buttonPAUSE;
    
-   reg [26:0]  low_freq_clk_dv_inc;
-   reg [25:0]
+   reg[5:0] minutes;
+   reg[5:0] seconds;
+
+
+//Debouncing clock//
+   assign clk_dv_inc = clk_dv + 1;
    
+   always @ (posedge clk) begin
+        clk_dv   <= clk_dv_inc[16:0];
+        clk_en   <= clk_dv_inc[17]; //clk_en is the debouncing sampler
+   end
+//////
+
+//Other clocks//
+  always @ (posedge clk) begin
+    master_clk_counter <= master_clk_counter + 1;
+    if(master_clk_counter == 100000000) begin
+      master_clk_counter <= 0;
+    end
+    if(master_clk_counter % (100000000 / 2) == 0) begin
+      clkCOUNTER <= !clkCOUNTER;
+    end
+    if(master_clk_counter % (100000000 / 4) == 0) begin
+      clkADJ <= !clkADJ;
+    end
+    if(master_clk_counter % (100000000 / 1000) == 0) begin
+      clkDISPLAY <= !clkDISPLAY;
+    end
+    if(master_clk_counter % (100000000 / 3) == 0) begin
+      clkBLINKING <= clkBLINKING;
+    end
+  end
+
+//DEBOUNCING//
+assign swADJ = sw[0] & clk_en;
+assign swSEL = sw[1] & clk_en;
+assign buttonRESET = btnR & clk_en;
+assign buttonPAUSE = btnS & clk_en;
+//////
+
    // ===========================================================================
-   // Asynchronous Reset
+   // Counter
    // ===========================================================================
-
-   assign arst_i = btnR;
-   assign rst = arst_ff[0];
-   
-   always @ (posedge clk or posedge arst_i)
-     if (arst_i)
-       arst_ff <= 2'b11;
-     else
-       arst_ff <= {1'b0, arst_ff[1]};
-
-   // ===========================================================================
-   // 763Hz timing signal for clock enable --> 381 Hz
-   // ===========================================================================
-
-   //assign clk_dv_inc = clk_dv + 1;
-   
-   always @ (posedge clk)
-     clk_dv_inc <= clk_dv + 1;
-     if (rst)
-       begin
-          clk_dv   <= 0;
-          clk_en   <= 1'b0;
-          clk_en_d <= 1'b0;
-       end
-     else
-       begin
-          clk_dv   <= clk_dv_inc[17:0];
-          clk_en   <= clk_dv_inc[18];
-          clk_en_d <= clk_en;
-       end
-   
-   // ===========================================================================
-   // Instruction Stepping Control
-   // ===========================================================================
-
-   always @ (posedge clk)
-     if (rst)
-       begin
-          inst_wd[7:0] <= 0;
-          step_d[2:0]  <= 0;
-       end
-     else if (clk_en)
-       begin
-          inst_wd[7:0] <= sw[7:0];
-          step_d[2:0]  <= {btnS, step_d[2:1]};
-       end
-
-   always @ (posedge clk)
-     if (rst)
-       inst_vld <= 1'b0;
-     else
-       inst_vld <= ~step_d[0] & step_d[1] & clk_en_d;
-
-   always @ (posedge clk)
-     if (rst)
-       inst_cnt <= 0;
-     else if (inst_vld)
-       inst_cnt <= inst_cnt + 1;
-
-   assign led[7:0] = inst_cnt[7:0];
-   
-   // ===========================================================================
-   // Sequencer
-   // ===========================================================================
-
-   seq seq_ (// Outputs
-             .o_tx_data                 (seq_tx_data[seq_dp_width-1:0]),
-             .o_tx_valid                (seq_tx_valid),
-             // Inputs
-             .i_tx_busy                 (uart_tx_busy),
-             .i_inst                    (inst_wd[seq_in_width-1:0]),
-             .i_inst_valid              (inst_vld),
-             /*AUTOINST*/
-             // Inputs
-             .clk                       (clk),
-             .rst                       (rst));
-
+   counter counter_ (//outputs
+                     .minutes(minutes),
+                     .seconds(seconds),
+                     //inputs
+                     .clkNORMAL(clkCOUNTER),
+                     .clkADJ(clkADJ),
+                     .btnR(buttonRESET),
+                     .btnP(buttonPAUSE),
+                     .swADJ(swADJ),
+                     .swSEL(swSEL)); //add the other parameters
 endmodule
