@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module counter(
   // Inputs
-  btnR, btnP, swADJ, swSEL, clkNORMAL, clkADJ,
+  btnR, btnP, swADJ, swSEL, clkNORMAL, clkADJ, clk,
   // Outputs
   minutes, seconds
   );
@@ -31,28 +31,41 @@ module counter(
   input swSEL;
   input clkNORMAL;
   input clkADJ;
+  input clk;
   
   output [5:0] minutes;
   output [5:0] seconds;
   
   //local vars to store state
   reg isPaused = 0;
+  reg isResetting = 0;
+  reg isResettingNORMAL = 0;
+  reg isResettingSEL = 0;
   reg[5:0] secondsNORMAL = 0;
   reg[5:0] minutesNORMAL = 0;
   reg[5:0] secondsSEL = 0;
   reg[5:0] minutesSEL = 0;
   
+  reg previous_clkNORMAL = 0;
+  reg use_clkNORMAL = 0;
   
+  always @ (posedge clk) begin
+    use_clkNORMAL <= clkNORMAL && !previous_clkNORMAL;
+    previous_clkNORMAL <= clkNORMAL;
+  end
   
   always @ (posedge btnP)
     isPaused <= !isPaused;
+  
+  always @ (posedge btnR)
+    isResetting <= 1;
 
-  always @ (posedge clkNORMAL) begin//handle normal counting states
+  always @ (posedge clk, posedge btnR) begin//handle normal counting states
     if(btnR) begin
       minutesNORMAL <= 0;
       secondsNORMAL <= 0;
     end
-    else if(!isPaused) begin
+    else if(!isPaused && !swADJ && use_clkNORMAL) begin
       if(seconds == 59) begin
         secondsNORMAL <= 0;
         if(minutes == 59) begin
@@ -70,24 +83,30 @@ module counter(
       minutesNORMAL <= minutes;
       secondsNORMAL <= seconds;
     end
-end
-  always @ (posedge clkADJ) begin//handle adjustment states
+  end
+  always @ (posedge clkADJ, posedge btnR) begin//handle adjustment states
     if(btnR) begin
       minutesSEL <= 0;
       secondsSEL <= 0;
     end
-    else if(!isPaused) begin
-      if(seconds == 59) begin
-        secondsSEL <= 0;
+    else if(!isPaused && swADJ) begin
+      if(swSEL) begin //increase seconds
+        if(seconds == 59) begin
+          secondsSEL <= 0;
+        end
+        else begin
+          secondsSEL <= seconds + 1;
+        end
+        minutesSEL <= minutes;
+      end
+      else begin //increase minutes
         if(minutes == 59) begin
           minutesSEL <= 0;
         end
         else begin
           minutesSEL <= minutes + 1;
         end
-      end
-      else begin
-        secondsSEL <= seconds + 1;
+        secondsSEL <= seconds;
       end
     end
     else begin
