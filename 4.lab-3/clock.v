@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module clock(
    // Outputs
-   seg, an, Led,
+   seg, an, LedR, LedS,
    // Inputs
    sw, btnS, btnR, clk
    );
@@ -33,7 +33,8 @@ module clock(
    input        btnR;                 // arst
    output [6:0] seg;
    output [3:0] an;
-   output Led;
+   output LedR;
+   output LedS;
    // Logic
    input        clk;                  // 100MHz
    reg clkCOUNTER = 0;
@@ -55,9 +56,9 @@ module clock(
    wire swADJ;
    wire swSEL;
    
-   reg [7:0] inst_wd;
-   reg[2:0] stepRESET;
-   reg[2:0] stepPAUSE;
+   reg [7:0] inst_wd=0;
+   reg[2:0] stepRESET=0;
+   reg[2:0] stepPAUSE=0;
    reg buttonRESET;
    reg buttonPAUSE;
    
@@ -97,7 +98,7 @@ module clock(
     clkDISPLAY_counter <= clkDISPLAY_counter + 1;
     if(clkDISPLAY_counter == 100000) clkDISPLAY_counter <= 0;
     clkBLINKING_counter <= clkBLINKING_counter + 1;
-    if(clkBLINKING_counter == 16666666) clkBLINKING_counter <= 0;
+    if(clkBLINKING_counter == 12500000) clkBLINKING_counter <= 0;
  
     if(!clkCOUNTER_counter) begin
       clkCOUNTER <= !clkCOUNTER;
@@ -148,7 +149,7 @@ always @seconds begin
   secondsSecondDigit = (swADJ && swSEL && clkBLINKING) ? 10 : seconds % 10;
   secondsFirstDigit = (swADJ && swSEL && clkBLINKING) ? 10 : seconds / 10;
 end
-reg[1:0] displayDigit;
+reg[1:0] displayDigit = 0;
 always @(posedge clkDISPLAY) begin
   displayDigit <= displayDigit + 1;
 end
@@ -160,5 +161,6 @@ display display_ (//outputs
 
 assign an = displayDigit == 0 ? 4'b0111 : (displayDigit == 1 ? 4'b1011 : (displayDigit == 2 ? 4'b1101 : 4'b1110));
 
-assign Led = btnR;
+assign LedR = btnR;
+assign LedS = btnS;
 endmodule

@@ -25,14 +25,16 @@
 module testbench;
 
 	// Inputs
-	reg [7:0] sw;
-	reg btnS;
-	reg btnR;
-	reg clk;
+	reg [7:0] sw = 0;
+	reg btnS=0;
+	reg btnR  =  0;
+	reg clk =0;
 
 	// Outputs
 	wire [6:0] seg;
 	wire [3:0] an;
+
+  integer counter = 0;
 
 	// Instantiate the Unit Under Test (UUT)
 	clock uut (
@@ -43,7 +45,7 @@ module testbench;
 		.btnR(btnR), 
 		.clk(clk)
 	);
-
+/*
 	initial begin
 		// Initialize Inputs
 		sw = 0;
@@ -52,10 +54,19 @@ module testbench;
 		clk = 0;
         
 		// Add stimulus here
-  
-	end
-  always
-      #1 clk <= !clk;
-  
+    
+	end*/
+  always begin
+      #10 clk <= !clk;
+      if(counter == 99) begin
+        counter <= 0;
+        sw[0] <= !sw[0];
+      end
+      else begin
+        counter <= counter + 1;
+      end
+      btnS <= 0;
+      btnR <= 0;
+  end
 endmodule
 
