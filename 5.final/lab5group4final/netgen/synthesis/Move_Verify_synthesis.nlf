@@ -1,0 +1,27 @@
+Release 14.7 - netgen P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis
+-ofmt verilog -sim Move_Verify.ngc Move_Verify_synthesis.v  
+
+Reading design 'Move_Verify.ngc' ...
+Processing design ... 
+  Preping design's networks ...
+  Preping design's macros ...
+
+WARNING:NetListWriters:306 - Signal bus NlwRenamedSignal_black_pawn_attack[55 :
+   0] on block Black_Pawn_Attack is not reconstructed, because there are some
+   missing bus signals.
+
+WARNING:NetListWriters:306 - Signal bus NlwRenamedSignal_white_pawn_attack[63 :
+   8] on block White_Pawn_Attack is not reconstructed, because there are some
+   missing bus signals.
+Writing Verilog netlist file
+'C:\Users\Student\Documents\dhb\lab5group4final\netgen\synthesis\Move_Verify_syn
+thesis.v' ...
+INFO:NetListWriters:633 - The generated Verilog netlist contains Xilinx UNISIM
+   simulation primitives and has to be used with UNISIM simulation library for
+   correct compilation and simulation. 
+Number of warnings: 2
+Number of info messages: 1
+Total memory usage is 4412172 kilobytes

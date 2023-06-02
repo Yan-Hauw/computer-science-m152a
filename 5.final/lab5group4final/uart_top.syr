@@ -1,0 +1,591 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: uart_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "uart_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "uart_top"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : uart_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart_fifo.v" into library work
+Parsing module <uart_fifo>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart.v" into library work
+Parsing module <uart>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart_top.v" into library work
+Parsing module <uart_top>.
+Parsing verilog file "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\/seq_definitions.v" included at line 8.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <uart_top>.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart_top.v" Line 60: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart_top.v" Line 61: Result of 632-bit expression is truncated to fit in 624-bit target.
+
+Elaborating module <uart_fifo>.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart_fifo.v" Line 55: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart_fifo.v" Line 61: Result of 32-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <uart>.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart.v" Line 90: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart.v" Line 93: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart.v" Line 95: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart.v" Line 98: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart.v" Line 138: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart.v" Line 139: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart.v" Line 147: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart.v" Line 153: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart.v" Line 192: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart.v" Line 209: Result of 32-bit expression is truncated to fit in 2-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <uart_top>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart_top.v".
+        seq_in_width = 8
+        seq_op_width = 2
+        seq_rn_width = 2
+        seq_num_regs = 4
+        seq_im_width = 4
+        seq_op_push = 2'b00
+        seq_op_add = 2'b01
+        seq_op_mult = 2'b10
+        seq_op_send = 2'b11
+        uart_num_nib = 78
+        seq_dp_width = 624
+        stIdle = 0
+        stNib1 = 1
+        stNL = 79
+        stCR = 80
+INFO:Xst:3210 - "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart_top.v" line 102: Output port <fifo_cnt> of the instance <tfifo_> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart_top.v" line 122: Output port <is_receiving> of the instance <uart_> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart_top.v" line 122: Output port <recv_error> of the instance <uart_> is unconnected or connected to loadless signal.
+    Found 624-bit register for signal <tx_data>.
+    Found 1-bit register for signal <tfifo_rd_z>.
+    Found 8-bit register for signal <state>.
+    Found 8-bit adder for signal <state[7]_GND_1_o_add_5_OUT> created at line 60.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred 633 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <uart_top> synthesized.
+
+Synthesizing Unit <uart_fifo>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart_fifo.v".
+        size = 1024
+        sizew = 10
+    Set property "ram_style = block" for signal <mem>.
+    Found 1024x8-bit dual-port RAM <Mram_mem> for signal <mem>.
+    Found 10-bit register for signal <rp>.
+    Found 10-bit register for signal <fifo_cnt>.
+    Found 1-bit register for signal <fifo_full>.
+    Found 1-bit register for signal <fifo_empty>.
+    Found 8-bit register for signal <fifo_out>.
+    Found 10-bit register for signal <wp>.
+    Found 10-bit adder for signal <wp[9]_GND_2_o_add_1_OUT> created at line 50.
+    Found 10-bit adder for signal <rp[9]_GND_2_o_add_2_OUT> created at line 51.
+    Found 10-bit adder for signal <fifo_cnt[9]_GND_2_o_add_3_OUT> created at line 55.
+    Found 10-bit subtractor for signal <GND_2_o_GND_2_o_sub_6_OUT<9:0>> created at line 61.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  40 D-type flip-flop(s).
+Unit <uart_fifo> synthesized.
+
+Synthesizing Unit <uart>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\src_lab1\src (1)\rtl\uart.v".
+        CLOCK_DIVIDE = 25
+        RX_IDLE = 0
+        RX_CHECK_START = 1
+        RX_READ_BITS = 2
+        RX_CHECK_STOP = 3
+        RX_DELAY_RESTART = 4
+        RX_ERROR = 5
+        RX_RECEIVED = 6
+        TX_IDLE = 0
+        TX_SENDING = 1
+        TX_DELAY_RESTART = 2
+    Found 2-bit register for signal <tx_state>.
+    Found 11-bit register for signal <rx_clk_divider>.
+    Found 6-bit register for signal <rx_countdown>.
+    Found 11-bit register for signal <tx_clk_divider>.
+    Found 6-bit register for signal <tx_countdown>.
+    Found 8-bit register for signal <rx_data>.
+    Found 4-bit register for signal <rx_bits_remaining>.
+    Found 4-bit register for signal <tx_bits_remaining>.
+    Found 1-bit register for signal <tx_out>.
+    Found 8-bit register for signal <tx_data>.
+    Found 3-bit register for signal <recv_state>.
+    Found 11-bit subtractor for signal <GND_3_o_GND_3_o_sub_9_OUT<10:0>> created at line 90.
+    Found 6-bit subtractor for signal <GND_3_o_GND_3_o_sub_11_OUT<5:0>> created at line 93.
+    Found 11-bit subtractor for signal <GND_3_o_GND_3_o_sub_14_OUT<10:0>> created at line 95.
+    Found 6-bit subtractor for signal <GND_3_o_GND_3_o_sub_16_OUT<5:0>> created at line 98.
+    Found 4-bit subtractor for signal <GND_3_o_GND_3_o_sub_30_OUT<3:0>> created at line 138.
+    Found 4-bit subtractor for signal <GND_3_o_GND_3_o_sub_54_OUT<3:0>> created at line 192.
+    Found 3-bit 8-to-1 multiplexer for signal <recv_state[2]_recv_state[2]_wide_mux_41_OUT> created at line 102.
+    Found 6-bit 7-to-1 multiplexer for signal <recv_state[2]_rx_countdown[5]_wide_mux_42_OUT> created at line 102.
+    Found 2-bit 4-to-1 multiplexer for signal <tx_state[1]_tx_state[1]_wide_mux_64_OUT> created at line 173.
+    Found 6-bit 3-to-1 multiplexer for signal <tx_state[1]_tx_countdown[5]_wide_mux_68_OUT> created at line 173.
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred  64 D-type flip-flop(s).
+	inferred  31 Multiplexer(s).
+Unit <uart> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 1024x8-bit dual-port RAM                              : 1
+# Adders/Subtractors                                   : 11
+ 10-bit adder                                          : 3
+ 10-bit subtractor                                     : 1
+ 11-bit subtractor                                     : 2
+ 4-bit subtractor                                      : 2
+ 6-bit subtractor                                      : 2
+ 8-bit adder                                           : 1
+# Registers                                            : 20
+ 1-bit register                                        : 4
+ 10-bit register                                       : 3
+ 11-bit register                                       : 2
+ 2-bit register                                        : 1
+ 3-bit register                                        : 1
+ 4-bit register                                        : 2
+ 6-bit register                                        : 2
+ 624-bit register                                      : 1
+ 8-bit register                                        : 4
+# Multiplexers                                         : 34
+ 1-bit 2-to-1 multiplexer                              : 2
+ 11-bit 2-to-1 multiplexer                             : 6
+ 2-bit 2-to-1 multiplexer                              : 3
+ 2-bit 4-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 5
+ 3-bit 8-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 2
+ 6-bit 2-to-1 multiplexer                              : 8
+ 6-bit 3-to-1 multiplexer                              : 1
+ 6-bit 7-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <uart>.
+The following registers are absorbed into counter <tx_bits_remaining>: 1 register on signal <tx_bits_remaining>.
+Unit <uart> synthesized (advanced).
+
+Synthesizing (advanced) Unit <uart_fifo>.
+The following registers are absorbed into accumulator <rp>: 1 register on signal <rp>.
+The following registers are absorbed into accumulator <wp>: 1 register on signal <wp>.
+INFO:Xst:3226 - The RAM <Mram_mem> will be implemented as a BLOCK RAM, absorbing the following register(s): <fifo_out>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <wr>            | high     |
+    |     addrA          | connected to signal <wp>            |          |
+    |     diA            | connected to signal <fifo_in>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <rp>            |          |
+    |     doB            | connected to signal <fifo_out>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <uart_fifo> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 1024x8-bit dual-port block RAM                        : 1
+# Adders/Subtractors                                   : 8
+ 10-bit adder                                          : 1
+ 10-bit subtractor                                     : 1
+ 11-bit subtractor                                     : 2
+ 4-bit subtractor                                      : 1
+ 6-bit subtractor                                      : 2
+ 8-bit adder                                           : 1
+# Counters                                             : 1
+ 4-bit down counter                                    : 1
+# Accumulators                                         : 2
+ 10-bit up accumulator                                 : 2
+# Registers                                            : 705
+ Flip-Flops                                            : 705
+# Multiplexers                                         : 43
+ 1-bit 2-to-1 multiplexer                              : 14
+ 11-bit 2-to-1 multiplexer                             : 6
+ 2-bit 2-to-1 multiplexer                              : 3
+ 2-bit 4-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 5
+ 3-bit 8-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 6
+ 6-bit 3-to-1 multiplexer                              : 1
+ 6-bit 7-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <uart_top> ...
+
+Optimizing unit <uart> ...
+
+Optimizing unit <uart_fifo> ...
+WARNING:Xst:1293 - FF/Latch <rx_clk_divider_5> has a constant value of 0 in block <uart_>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rx_clk_divider_6> has a constant value of 0 in block <uart_>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rx_clk_divider_7> has a constant value of 0 in block <uart_>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rx_clk_divider_8> has a constant value of 0 in block <uart_>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rx_clk_divider_9> has a constant value of 0 in block <uart_>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rx_clk_divider_10> has a constant value of 0 in block <uart_>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <tx_clk_divider_5> has a constant value of 0 in block <uart_>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <tx_clk_divider_6> has a constant value of 0 in block <uart_>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <tx_clk_divider_7> has a constant value of 0 in block <uart_>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <tx_clk_divider_8> has a constant value of 0 in block <uart_>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <tx_clk_divider_9> has a constant value of 0 in block <uart_>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <tx_clk_divider_10> has a constant value of 0 in block <uart_>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block uart_top, actual ratio is 24.
+FlipFlop state_4 has been replicated 1 time(s)
+FlipFlop state_6 has been replicated 1 time(s)
+FlipFlop tfifo_/fifo_full has been replicated 1 time(s)
+FlipFlop uart_/tx_state_0 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 721
+ Flip-Flops                                            : 721
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : uart_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2094
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 11
+#      LUT3                        : 31
+#      LUT4                        : 685
+#      LUT5                        : 664
+#      LUT6                        : 699
+#      MUXF7                       : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 721
+#      FD                          : 36
+#      FDE                         : 641
+#      FDR                         : 43
+#      FDS                         : 1
+# RAMS                             : 1
+#      RAMB8BWER                   : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 638
+#      IBUF                        : 627
+#      OBUF                        : 11
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             721  out of  18224     3%  
+ Number of Slice LUTs:                 2091  out of   9112    22%  
+    Number used as Logic:              2091  out of   9112    22%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2094
+   Number with an unused Flip Flop:    1373  out of   2094    65%  
+   Number with an unused LUT:             3  out of   2094     0%  
+   Number of fully used LUT-FF pairs:   718  out of   2094    34%  
+   Number of unique control sets:         7
+
+IO Utilization: 
+ Number of IOs:                         639
+ Number of bonded IOBs:                 639  out of    232   275% (*) 
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 722   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.112ns (Maximum Frequency: 195.618MHz)
+   Minimum input arrival time before clock: 5.691ns
+   Maximum output required time after clock: 7.451ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.112ns (frequency: 195.618MHz)
+  Total number of paths / destination ports: 19291 / 768
+-------------------------------------------------------------------------
+Delay:               5.112ns (Levels of Logic = 4)
+  Source:            tfifo_/fifo_full_1 (FF)
+  Destination:       tfifo_/fifo_cnt_5 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: tfifo_/fifo_full_1 to tfifo_/fifo_cnt_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q            653   0.447   2.124  fifo_full_1 (fifo_full_1)
+     end scope: 'tfifo_:fifo_full'
+     LUT4:I3->O           18   0.205   1.050  tfifo_wr1 (tfifo_wr)
+     begin scope: 'tfifo_:fifo_wr'
+     LUT2:I1->O            7   0.205   0.774  wr1 (wr)
+     LUT6:I5->O            1   0.205   0.000  wr_fifo_cnt[9]_select_10_OUT<8>1 (wr_fifo_cnt[9]_select_10_OUT<8>)
+     FDR:D                     0.102          fifo_cnt_8
+    ----------------------------------------
+    Total                      5.112ns (1.164ns logic, 3.948ns route)
+                                       (22.8% logic, 77.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2643 / 1364
+-------------------------------------------------------------------------
+Offset:              5.691ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       tx_data_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to tx_data_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            92   1.222   1.824  rst_IBUF (rst_IBUF)
+     INV:I->O            624   0.206   2.116  rst_inv1_INV_0 (rst_inv)
+     FDE:CE                    0.322          tx_data_0
+    ----------------------------------------
+    Total                      5.691ns (1.750ns logic, 3.941ns route)
+                                       (30.8% logic, 69.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 20 / 11
+-------------------------------------------------------------------------
+Offset:              7.451ns (Levels of Logic = 3)
+  Source:            state_5 (FF)
+  Destination:       o_tx_busy (PAD)
+  Source Clock:      clk rising
+
+  Data Path: state_5 to o_tx_busy
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             11   0.447   1.227  state_5 (state_5)
+     LUT6:I1->O          620   0.203   2.221  state[7]_GND_1_o_equal_10_o<7>11 (state[7]_GND_1_o_equal_10_o<7>1)
+     LUT3:I1->O            1   0.203   0.579  o_tx_busy1 (o_tx_busy_OBUF)
+     OBUF:I->O                 2.571          o_tx_busy_OBUF (o_tx_busy)
+    ----------------------------------------
+    Total                      7.451ns (3.424ns logic, 4.027ns route)
+                                       (46.0% logic, 54.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.112|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.89 secs
+ 
+--> 
+
+Total memory usage is 4519944 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   27 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

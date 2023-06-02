@@ -1,0 +1,18 @@
+
+
+
+// Instantiate the module
+chess instance_name (
+    .board_state(board_state), 
+    .cursor_file(cursor_file), 
+    .cursor_rank(cursor_rank), 
+    .sw(sw), 
+    .btnS(btnS), 
+    .btnU(btnU), 
+    .btnL(btnL), 
+    .btnD(btnD), 
+    .btnR(btnR), 
+    .clk(clk)
+    );
+
+

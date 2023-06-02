@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+Check_Checker instance_name (
+    .is_white(is_white), 
+    .piece_bitboards_flattened(piece_bitboards_flattened), 
+    .is_in_check(is_in_check)
+    );
+
+

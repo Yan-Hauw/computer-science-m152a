@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/Student/Documents/dhb/lab5group4final/Line_Attack.xst" -ofn "C:/Users/Student/Documents/dhb/lab5group4final/Line_Attack.syr" 

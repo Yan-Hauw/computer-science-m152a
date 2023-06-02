@@ -1,0 +1,394 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: Line_Attack.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Line_Attack.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Line_Attack"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : Line_Attack
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\line_attack.v" into library work
+Parsing verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\/utility.v" included at line 2.
+WARNING:HDLCompiler:1591 - "C:\Users\Student\Documents\dhb\lab5group4final\logic\/utility.v" Line 3: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "C:\Users\Student\Documents\dhb\lab5group4final\logic\/utility.v" Line 18: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "C:\Users\Student\Documents\dhb\lab5group4final\logic\/utility.v" Line 39: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "C:\Users\Student\Documents\dhb\lab5group4final\logic\/utility.v" Line 60: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "C:\Users\Student\Documents\dhb\lab5group4final\logic\/utility.v" Line 66: Root scope declaration is not allowed in verilog 95/2K mode
+Parsing module <Line_Attack>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Line_Attack>.
+
+Elaborating module <$unit_1>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Line_Attack>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\line_attack.v".
+    Found 64-bit subtractor for signal <occupied[63]_GND_1_o_sub_8_OUT> created at line 34.
+    Found 64-bit subtractor for signal <GND_1_o_GND_1_o_sub_69_OUT> created at line 34.
+    Found 64-bit subtractor for signal <GND_1_o_GND_1_o_sub_150_OUT> created at line 34.
+    Found 64-bit subtractor for signal <GND_1_o_GND_1_o_sub_188_OUT> created at line 34.
+    Found 7-bit adder for signal <n0331> created at line 24.
+    Found 64-bit shifter logical left for signal <rook> created at line 16
+    Found 960-bit shifter logical right for signal <n0168> created at line 25
+    Found 960-bit shifter logical right for signal <n0169> created at line 26
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <Line_Attack> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 64-bit subtractor                                     : 4
+ 7-bit adder                                           : 1
+# Multiplexers                                         : 1
+ 64-bit 2-to-1 multiplexer                             : 1
+# Logic shifters                                       : 3
+ 64-bit shifter logical left                           : 1
+ 960-bit shifter logical right                         : 2
+# Xors                                                 : 76
+ 64-bit xor2                                           : 76
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 64-bit subtractor                                     : 4
+ 7-bit adder                                           : 1
+# Multiplexers                                         : 1
+ 64-bit 2-to-1 multiplexer                             : 1
+# Logic shifters                                       : 3
+ 64-bit shifter logical left                           : 1
+ 960-bit shifter logical right                         : 2
+# Xors                                                 : 76
+ 64-bit xor2                                           : 76
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Line_Attack> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Line_Attack, actual ratio is 8.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Line_Attack.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1103
+#      LUT2                        : 1
+#      LUT3                        : 16
+#      LUT4                        : 146
+#      LUT5                        : 314
+#      LUT6                        : 125
+#      MUXCY                       : 248
+#      VCC                         : 1
+#      XORCY                       : 252
+# IO Buffers                       : 134
+#      IBUF                        : 70
+#      OBUF                        : 64
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                  602  out of   9112     6%  
+    Number used as Logic:               602  out of   9112     6%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    602
+   Number with an unused Flip Flop:     602  out of    602   100%  
+   Number with an unused LUT:             0  out of    602     0%  
+   Number of fully used LUT-FF pairs:     0  out of    602     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                         134
+ Number of bonded IOBs:                 134  out of    232    57%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 11.486ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 112398 / 64
+-------------------------------------------------------------------------
+Delay:               11.486ns (Levels of Logic = 66)
+  Source:            file<2> (PAD)
+  Destination:       line_attack<6> (PAD)
+
+  Data Path: file<2> to line_attack<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           207   1.222   2.284  file_2_IBUF (file_2_IBUF)
+     LUT3:I0->O           18   0.205   1.297  Sh42911 (GND_1_o_fileMasks[511]_and_186_OUT<11>_mand)
+     LUT5:I1->O            1   0.203   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_lut<3> (Msub_GND_1_o_GND_1_o_sub_188_OUT_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<3> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<4> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<5> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<6> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<7> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<8> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<9> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<10> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<11> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<12> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<13> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<14> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<15> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<16> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<17> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<18> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<19> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<20> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<21> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<22> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<23> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<24> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<25> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<26> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<27> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<28> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<29> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<29>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<30> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<30>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<31> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<31>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<32> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<32>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<33> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<33>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<34> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<34>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<35> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<35>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<36> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<36>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<37> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<37>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<38> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<38>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<39> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<39>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<40> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<40>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<41> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<41>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<42> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<42>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<43> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<43>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<44> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<44>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<45> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<45>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<46> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<46>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<47> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<47>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<48> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<48>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<49> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<49>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<50> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<50>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<51> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<51>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<52> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<52>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<53> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<53>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<54> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<54>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<55> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<55>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<56> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<56>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<57> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<57>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<58> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<58>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<59> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<59>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<60> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<60>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<61> (Msub_GND_1_o_GND_1_o_sub_188_OUT_cy<61>)
+     XORCY:CI->O           1   0.180   0.684  Msub_GND_1_o_GND_1_o_sub_188_OUT_xor<62> (GND_1_o_GND_1_o_sub_188_OUT<62>)
+     LUT6:I4->O            1   0.203   0.580  line_attack<6>1 (line_attack<6>1)
+     LUT5:I4->O            1   0.205   0.579  line_attack<6>2 (line_attack_6_OBUF)
+     OBUF:I->O                 2.571          line_attack_6_OBUF (line_attack<6>)
+    ----------------------------------------
+    Total                     11.486ns (6.063ns logic, 5.423ns route)
+                                       (52.8% logic, 47.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.40 secs
+ 
+--> 
+
+Total memory usage is 4535040 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

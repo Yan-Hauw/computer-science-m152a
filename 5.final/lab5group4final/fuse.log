@@ -1,0 +1,16 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/Student/Documents/dhb/lab5group4final/tb_isim_beh.exe -prj C:/Users/Student/Documents/dhb/lab5group4final/tb_beh.prj work.tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 6
+Turning on mult-threading, number of parallel sub-compilation jobs: 12 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/Student/Documents/dhb/lab5group4final/src_lab1/src (1)/rtl/uart_fifo.v" into library work
+Analyzing Verilog file "C:/Users/Student/Documents/dhb/lab5group4final/src_lab1/src (1)/rtl/uart.v" into library work
+Analyzing Verilog file "C:/Users/Student/Documents/dhb/lab5group4final/src_lab1/src (1)/rtl/uart_top.v" into library work
+Analyzing Verilog file "C:/Users/Student/Documents/dhb/lab5group4final/tb/model_uart.v" into library work
+Analyzing Verilog file "C:/Users/Student/Documents/dhb/lab5group4final/src_lab1/src (1)/rtl/nexys3.v" into library work
+Analyzing Verilog file "C:/Users/Student/Documents/dhb/lab5group4final/tb/tb.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:267 - "C:/Users/Student/Documents/dhb/lab5group4final/tb/tb.v" Line 63: Cannot find port led on this module
+ERROR:HDLCompiler:71 - "C:/Users/Student/Documents/dhb/lab5group4final/tb/tb.v" Line 126: inst_vld is not declared under prefix uut_
+ERROR:Simulator:778 - Static elaboration of top level Verilog design unit(s) in library work failed

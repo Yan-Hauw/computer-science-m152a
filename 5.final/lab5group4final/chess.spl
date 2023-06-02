@@ -1,0 +1,16 @@
+[Inputs]
+btnS
+btnU
+btnL
+btnD
+btnR
+clk
+=sw[7:0]=
+[Outputs]
+=board_state[767:0]=
+=cursor_file[2:0]=
+=cursor_rank[2:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel chess
+

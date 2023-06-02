@@ -1,0 +1,1011 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: chess.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "chess.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "chess"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : chess
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\white_pawn_push.v" into library work
+Parsing module <White_Pawn_Push>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\white_pawn_attack.v" into library work
+Parsing module <White_Pawn_Attack>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\positions_white.v" into library work
+Parsing module <White_Position>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\positions_black.v" into library work
+Parsing module <Black_Position>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\positions_all.v" into library work
+Parsing module <All_Position>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\line_attack.v" into library work
+Parsing verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\/utility.v" included at line 2.
+WARNING:HDLCompiler:1591 - "C:\Users\Student\Documents\dhb\lab5group4final\logic\/utility.v" Line 3: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "C:\Users\Student\Documents\dhb\lab5group4final\logic\/utility.v" Line 18: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "C:\Users\Student\Documents\dhb\lab5group4final\logic\/utility.v" Line 39: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "C:\Users\Student\Documents\dhb\lab5group4final\logic\/utility.v" Line 60: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "C:\Users\Student\Documents\dhb\lab5group4final\logic\/utility.v" Line 66: Root scope declaration is not allowed in verilog 95/2K mode
+Parsing module <Line_Attack>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\knight_attack.v" into library work
+Parsing module <Knight_Attack>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\king_attack.v" into library work
+Parsing module <King_Attack>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\diagonal_attack.v" into library work
+Parsing verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\/utility.v" included at line 2.
+Parsing module <Diagonal_Attack>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\black_pawn_push.v" into library work
+Parsing module <Black_Pawn_Push>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\black_pawn_attack.v" into library work
+Parsing module <Black_Pawn_Attack>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\move_verify.v" into library work
+Parsing module <Move_Verify>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\complete_attack_set.v" into library work
+Parsing module <Complete_Attack_Set>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\check_checker.v" into library work
+Parsing module <Check_Checker>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\complete_move_verifier.v" into library work
+Parsing module <Complete_Move_Verifier>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\castling_checker.v" into library work
+Parsing module <Castling_Checker>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\chess.v" into library work
+Parsing module <chess>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <chess>.
+
+Elaborating module <$unit_1>.
+
+Elaborating module <Complete_Move_Verifier>.
+
+Elaborating module <Move_Verify>.
+
+Elaborating module <White_Position>.
+
+Elaborating module <Black_Position>.
+
+Elaborating module <All_Position>.
+
+Elaborating module <White_Pawn_Push>.
+
+Elaborating module <White_Pawn_Attack>.
+
+Elaborating module <Black_Pawn_Push>.
+
+Elaborating module <Black_Pawn_Attack>.
+
+Elaborating module <Diagonal_Attack>.
+
+Elaborating module <Line_Attack>.
+
+Elaborating module <Knight_Attack>.
+
+Elaborating module <King_Attack>.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\logic\move_verify.v" Line 174: Result of 32-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <Check_Checker>.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\logic\check_checker.v" Line 98: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\logic\check_checker.v" Line 105: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\Student\Documents\dhb\lab5group4final\chess.v" Line 56: Assignment to piece ignored, since the identifier is never used
+
+Elaborating module <Castling_Checker>.
+
+Elaborating module <Complete_Attack_Set>.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\logic\complete_attack_set.v" Line 25: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\chess.v" Line 65: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\chess.v" Line 69: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\chess.v" Line 73: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\chess.v" Line 77: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\chess.v" Line 80: Result of 3-bit expression is truncated to fit in 2-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <chess>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\chess.v".
+WARNING:Xst:647 - Input <sw<7:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <btnS> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\Student\Documents\dhb\lab5group4final\chess.v" line 56: Output port <piece> of the instance <cmv> is unconnected or connected to loadless signal.
+    Found 3-bit register for signal <cursor_file>.
+    Found 3-bit register for signal <old_file>.
+    Found 3-bit register for signal <old_rank>.
+    Found 3-bit register for signal <new_file>.
+    Found 3-bit register for signal <new_rank>.
+    Found 768-bit register for signal <board_state>.
+    Found 64-bit register for signal <en_passant_bitboard>.
+    Found 1-bit register for signal <is_white>.
+    Found 1-bit register for signal <prev_sw_0>.
+    Found 3-bit register for signal <cursor_rank>.
+    Found 3-bit adder for signal <cursor_rank[2]_GND_1_o_add_1_OUT> created at line 65.
+    Found 3-bit adder for signal <cursor_file[2]_GND_1_o_add_4_OUT> created at line 77.
+    Found 3-bit subtractor for signal <GND_1_o_GND_1_o_sub_3_OUT<2:0>> created at line 69.
+    Found 3-bit subtractor for signal <GND_1_o_GND_1_o_sub_4_OUT<2:0>> created at line 73.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred 852 D-type flip-flop(s).
+Unit <chess> synthesized.
+
+Synthesizing Unit <Complete_Move_Verifier>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\complete_move_verifier.v".
+    Found 4-bit subtractor for signal <GND_3_o_GND_3_o_sub_2_OUT> created at line 42.
+    Found 4-bit subtractor for signal <GND_3_o_GND_3_o_sub_8_OUT> created at line 45.
+    Found 4-bit subtractor for signal <GND_3_o_GND_3_o_sub_10_OUT> created at line 46.
+    Found 4-bit adder for signal <n0057[3:0]> created at line 43.
+    Found 8-bit adder for signal <n0048> created at line 43.
+    Found 32-bit adder for signal <GND_3_o_GND_3_o_add_10_OUT> created at line 46.
+    Found 64-bit shifter logical left for signal <GND_3_o_BUS_0002_shift_left_5_OUT> created at line 43
+    Found 64-bit shifter logical left for signal <GND_3_o_GND_3_o_shift_left_11_OUT> created at line 46
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred   6 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <Complete_Move_Verifier> synthesized.
+
+Synthesizing Unit <Move_Verify>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\move_verify.v".
+    Found 11-bit subtractor for signal <n1049> created at line 76.
+    Found 11-bit subtractor for signal <n1053> created at line 104.
+    Found 11-bit subtractor for signal <n1057> created at line 114.
+    Found 11-bit subtractor for signal <n1061> created at line 124.
+    Found 11-bit subtractor for signal <n1065> created at line 134.
+    Found 11-bit subtractor for signal <n1069> created at line 144.
+    Found 7-bit adder for signal <n1028> created at line 39.
+    Found 7-bit adder for signal <n1031> created at line 40.
+    Found 32-bit adder for signal <n0918[31:0]> created at line 104.
+    Found 32-bit adder for signal <n0923[31:0]> created at line 114.
+    Found 32-bit adder for signal <n0928[31:0]> created at line 124.
+    Found 32-bit adder for signal <n0933[31:0]> created at line 134.
+    Found 32-bit adder for signal <n0939[31:0]> created at line 144.
+    Found 64-bit shifter logical left for signal <old_square_bitboard> created at line 36
+    Found 64-bit shifter logical left for signal <new_square_bitboard> created at line 37
+    Found 1472-bit shifter logical right for signal <n1051> created at line 76
+    Found 1472-bit shifter logical right for signal <n1055> created at line 104
+    Found 1472-bit shifter logical right for signal <n1059> created at line 114
+    Found 1472-bit shifter logical right for signal <n1063> created at line 124
+    Found 1472-bit shifter logical right for signal <n1067> created at line 134
+    Found 1472-bit shifter logical right for signal <n1071> created at line 144
+    Found 1472-bit shifter logical left for signal <n1050> created at line 76
+    Found 1472-bit shifter logical left for signal <n1054> created at line 104
+    Found 1472-bit shifter logical left for signal <n1058> created at line 114
+    Found 1472-bit shifter logical left for signal <n1062> created at line 124
+    Found 1472-bit shifter logical left for signal <n1066> created at line 134
+    Found 1472-bit shifter logical left for signal <n1070> created at line 144
+    Summary:
+	inferred  13 Adder/Subtractor(s).
+	inferred 728 Multiplexer(s).
+	inferred  14 Combinational logic shifter(s).
+Unit <Move_Verify> synthesized.
+
+Synthesizing Unit <White_Position>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\positions_white.v".
+WARNING:Xst:647 - Input <piece_bitboards_flattened<383:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <White_Position> synthesized.
+
+Synthesizing Unit <Black_Position>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\positions_black.v".
+WARNING:Xst:647 - Input <piece_bitboards_flattened<767:384>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <Black_Position> synthesized.
+
+Synthesizing Unit <All_Position>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\positions_all.v".
+    Summary:
+	no macro.
+Unit <All_Position> synthesized.
+
+Synthesizing Unit <White_Pawn_Push>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\white_pawn_push.v".
+WARNING:Xst:647 - Input <white_pawn<63:56>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <White_Pawn_Push> synthesized.
+
+Synthesizing Unit <White_Pawn_Attack>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\white_pawn_attack.v".
+WARNING:Xst:647 - Input <white_pawns<63:57>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <White_Pawn_Attack> synthesized.
+
+Synthesizing Unit <Black_Pawn_Push>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\black_pawn_push.v".
+WARNING:Xst:647 - Input <black_pawn<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <Black_Pawn_Push> synthesized.
+
+Synthesizing Unit <Black_Pawn_Attack>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\black_pawn_attack.v".
+WARNING:Xst:647 - Input <black_pawns<6:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <Black_Pawn_Attack> synthesized.
+
+Synthesizing Unit <Diagonal_Attack>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\diagonal_attack.v".
+    Found 4-bit subtractor for signal <GND_13_o_GND_13_o_sub_5_OUT> created at line 25.
+    Found 64-bit subtractor for signal <occupied[63]_GND_13_o_sub_20_OUT> created at line 38.
+    Found 64-bit subtractor for signal <occupied[63]_GND_13_o_sub_28_OUT> created at line 39.
+    Found 64-bit subtractor for signal <occupied[63]_GND_13_o_sub_48_OUT> created at line 38.
+    Found 64-bit subtractor for signal <occupied[63]_GND_13_o_sub_56_OUT> created at line 39.
+    Found 7-bit adder for signal <n0091> created at line 24.
+    Found 32-bit adder for signal <n0054> created at line 25.
+    Found 4-bit adder for signal <n0123[3:0]> created at line 26.
+    Found 64-bit shifter logical left for signal <bishop> created at line 16
+    Found 1856-bit shifter logical right for signal <n0048> created at line 25
+    Found 1856-bit shifter logical right for signal <n0049> created at line 26
+    Summary:
+	inferred   8 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <Diagonal_Attack> synthesized.
+
+Synthesizing Unit <Line_Attack>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\line_attack.v".
+    Found 64-bit subtractor for signal <occupied[63]_GND_14_o_sub_8_OUT> created at line 34.
+    Found 64-bit subtractor for signal <GND_14_o_GND_14_o_sub_69_OUT> created at line 34.
+    Found 64-bit subtractor for signal <GND_14_o_GND_14_o_sub_150_OUT> created at line 34.
+    Found 64-bit subtractor for signal <GND_14_o_GND_14_o_sub_188_OUT> created at line 34.
+    Found 7-bit adder for signal <n0331> created at line 24.
+    Found 64-bit shifter logical left for signal <rook> created at line 16
+    Found 960-bit shifter logical right for signal <n0168> created at line 25
+    Found 960-bit shifter logical right for signal <n0169> created at line 26
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <Line_Attack> synthesized.
+
+Synthesizing Unit <Knight_Attack>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\knight_attack.v".
+    Summary:
+	no macro.
+Unit <Knight_Attack> synthesized.
+
+Synthesizing Unit <King_Attack>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\king_attack.v".
+    Summary:
+	no macro.
+Unit <King_Attack> synthesized.
+
+Synthesizing Unit <Check_Checker>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\check_checker.v".
+    Found 11-bit subtractor for signal <n0169> created at line 65.
+    Found 11-bit subtractor for signal <n0173> created at line 69.
+    Found 11-bit subtractor for signal <n0177> created at line 73.
+    Found 11-bit subtractor for signal <n0181> created at line 77.
+    Found 11-bit subtractor for signal <n0185> created at line 81.
+    Found 32-bit adder for signal <n0125> created at line 104.
+    Found 32-bit adder for signal <n0126> created at line 104.
+    Found 32-bit adder for signal <n0127> created at line 104.
+    Found 32-bit adder for signal <n0128> created at line 104.
+    Found 32-bit adder for signal <n0129> created at line 104.
+    Found 32-bit adder for signal <n0130> created at line 104.
+    Found 32-bit adder for signal <n0131> created at line 104.
+    Found 32-bit adder for signal <n0134> created at line 65.
+    Found 32-bit adder for signal <n0137> created at line 69.
+    Found 32-bit adder for signal <n0140> created at line 73.
+    Found 32-bit adder for signal <n0144> created at line 77.
+    Found 32-bit adder for signal <n0147> created at line 81.
+    Found 1472-bit shifter logical right for signal <n0171> created at line 65
+    Found 1472-bit shifter logical right for signal <n0175> created at line 69
+    Found 1472-bit shifter logical right for signal <n0179> created at line 73
+    Found 1472-bit shifter logical right for signal <n0183> created at line 77
+    Found 1472-bit shifter logical right for signal <n0187> created at line 81
+    Found 1472-bit shifter logical left for signal <n0170> created at line 65
+    Found 1472-bit shifter logical left for signal <n0174> created at line 69
+    Found 1472-bit shifter logical left for signal <n0178> created at line 73
+    Found 1472-bit shifter logical left for signal <n0182> created at line 77
+    Found 1472-bit shifter logical left for signal <n0186> created at line 81
+    Found 1-bit 64-to-1 multiplexer for signal <GND_17_o_king_bitboard[63]_Mux_18_o> created at line 104.
+    Found 1-bit 64-to-1 multiplexer for signal <GND_17_o_king_bitboard[63]_Mux_20_o> created at line 104.
+    Found 1-bit 64-to-1 multiplexer for signal <GND_17_o_king_bitboard[63]_Mux_22_o> created at line 104.
+    Found 1-bit 64-to-1 multiplexer for signal <GND_17_o_king_bitboard[63]_Mux_24_o> created at line 104.
+    Found 1-bit 64-to-1 multiplexer for signal <GND_17_o_king_bitboard[63]_Mux_26_o> created at line 104.
+    Found 1-bit 64-to-1 multiplexer for signal <GND_17_o_king_bitboard[63]_Mux_28_o> created at line 104.
+    Found 1-bit 64-to-1 multiplexer for signal <GND_17_o_king_bitboard[63]_Mux_30_o> created at line 104.
+    Summary:
+	inferred  17 Adder/Subtractor(s).
+	inferred  34 Multiplexer(s).
+	inferred  10 Combinational logic shifter(s).
+Unit <Check_Checker> synthesized.
+
+Synthesizing Unit <Castling_Checker>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\castling_checker.v".
+    Found 11-bit subtractor for signal <n4968> created at line 55.
+    Found 11-bit subtractor for signal <n4972> created at line 58.
+    Found 32-bit adder for signal <n1737> created at line 55.
+    Found 32-bit adder for signal <n1742> created at line 58.
+    Found 64-bit shifter logical left for signal <o_o_check> created at line 24
+    Found 64-bit shifter logical left for signal <o_o_o_check> created at line 25
+    Found 64-bit shifter logical left for signal <o_o_empty> created at line 29
+    Found 64-bit shifter logical left for signal <o_o_o_empty> created at line 30
+    Found 1472-bit shifter logical right for signal <n4970> created at line 55
+    Found 64-bit shifter logical left for signal <GND_20_o_GND_20_o_shift_left_26_OUT> created at line 55
+    Found 1472-bit shifter logical right for signal <n4974> created at line 58
+    Found 64-bit shifter logical left for signal <GND_20_o_GND_20_o_shift_left_34_OUT> created at line 58
+    Found 64-bit shifter logical left for signal <GND_20_o_GND_20_o_shift_left_39_OUT> created at line 63
+    Found 1472-bit shifter logical right for signal <n4978> created at line 64
+    Found 64-bit shifter logical left for signal <GND_20_o_GND_20_o_shift_left_882_OUT> created at line 65
+    Found 1472-bit shifter logical left for signal <n4969> created at line 55
+    Found 1472-bit shifter logical left for signal <n4973> created at line 58
+    Found 1472-bit shifter logical left for signal <n4977> created at line 64
+    Found 3-bit comparator greater for signal <is_short_castling> created at line 22
+    Found 32-bit comparator equal for signal <GND_20_o_GND_20_o_equal_18_o> created at line 51
+    Found 32-bit comparator equal for signal <GND_20_o_GND_20_o_equal_20_o> created at line 51
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+	inferred 1676 Multiplexer(s).
+	inferred  14 Combinational logic shifter(s).
+Unit <Castling_Checker> synthesized.
+
+Synthesizing Unit <Complete_Attack_Set>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\complete_attack_set.v".
+    Found 4-bit adder for signal <index_offset[3]_GND_21_o_add_1_OUT> created at line 27.
+    Found 4-bit adder for signal <index_offset[3]_GND_21_o_add_3_OUT> created at line 28.
+    Found 4-bit adder for signal <index_offset[3]_GND_21_o_add_5_OUT> created at line 35.
+    Found 4-bit adder for signal <index_offset[3]_GND_21_o_add_76_OUT> created at line 40.
+    Found 4-bit adder for signal <index_offset[3]_GND_21_o_add_143_OUT> created at line 45.
+    Found 1472-bit shifter logical right for signal <n0256> created at line 27
+    Found 1472-bit shifter logical right for signal <n0258> created at line 28
+    Found 1472-bit shifter logical right for signal <n0260> created at line 35
+    Found 1472-bit shifter logical right for signal <n0316> created at line 40
+    Found 1472-bit shifter logical right for signal <n0373> created at line 45
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred   2 Multiplexer(s).
+	inferred   5 Combinational logic shifter(s).
+Unit <Complete_Attack_Set> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 73
+ 11-bit subtractor                                     : 13
+ 3-bit addsub                                          : 2
+ 32-bit adder                                          : 22
+ 4-bit adder                                           : 8
+ 4-bit subtractor                                      : 5
+ 64-bit subtractor                                     : 16
+ 7-bit adder                                           : 6
+ 8-bit adder                                           : 1
+# Registers                                            : 10
+ 1-bit register                                        : 2
+ 3-bit register                                        : 6
+ 64-bit register                                       : 1
+ 768-bit register                                      : 1
+# Comparators                                          : 3
+ 3-bit comparator greater                              : 1
+ 32-bit comparator equal                               : 2
+# Multiplexers                                         : 2450
+ 1-bit 2-to-1 multiplexer                              : 732
+ 1-bit 64-to-1 multiplexer                             : 7
+ 10-bit 2-to-1 multiplexer                             : 4
+ 11-bit 2-to-1 multiplexer                             : 4
+ 12-bit 2-to-1 multiplexer                             : 4
+ 13-bit 2-to-1 multiplexer                             : 4
+ 14-bit 2-to-1 multiplexer                             : 4
+ 15-bit 2-to-1 multiplexer                             : 4
+ 16-bit 2-to-1 multiplexer                             : 4
+ 17-bit 2-to-1 multiplexer                             : 4
+ 18-bit 2-to-1 multiplexer                             : 4
+ 19-bit 2-to-1 multiplexer                             : 4
+ 2-bit 2-to-1 multiplexer                              : 4
+ 20-bit 2-to-1 multiplexer                             : 4
+ 21-bit 2-to-1 multiplexer                             : 4
+ 22-bit 2-to-1 multiplexer                             : 4
+ 23-bit 2-to-1 multiplexer                             : 4
+ 24-bit 2-to-1 multiplexer                             : 4
+ 25-bit 2-to-1 multiplexer                             : 4
+ 26-bit 2-to-1 multiplexer                             : 4
+ 27-bit 2-to-1 multiplexer                             : 4
+ 28-bit 2-to-1 multiplexer                             : 4
+ 29-bit 2-to-1 multiplexer                             : 4
+ 3-bit 2-to-1 multiplexer                              : 12
+ 30-bit 2-to-1 multiplexer                             : 4
+ 31-bit 2-to-1 multiplexer                             : 4
+ 32-bit 2-to-1 multiplexer                             : 16
+ 33-bit 2-to-1 multiplexer                             : 4
+ 34-bit 2-to-1 multiplexer                             : 4
+ 35-bit 2-to-1 multiplexer                             : 4
+ 36-bit 2-to-1 multiplexer                             : 4
+ 37-bit 2-to-1 multiplexer                             : 4
+ 38-bit 2-to-1 multiplexer                             : 4
+ 39-bit 2-to-1 multiplexer                             : 4
+ 4-bit 2-to-1 multiplexer                              : 5
+ 40-bit 2-to-1 multiplexer                             : 4
+ 41-bit 2-to-1 multiplexer                             : 4
+ 42-bit 2-to-1 multiplexer                             : 4
+ 43-bit 2-to-1 multiplexer                             : 4
+ 44-bit 2-to-1 multiplexer                             : 4
+ 45-bit 2-to-1 multiplexer                             : 4
+ 46-bit 2-to-1 multiplexer                             : 4
+ 47-bit 2-to-1 multiplexer                             : 4
+ 48-bit 2-to-1 multiplexer                             : 4
+ 49-bit 2-to-1 multiplexer                             : 4
+ 5-bit 2-to-1 multiplexer                              : 4
+ 50-bit 2-to-1 multiplexer                             : 4
+ 51-bit 2-to-1 multiplexer                             : 4
+ 52-bit 2-to-1 multiplexer                             : 4
+ 53-bit 2-to-1 multiplexer                             : 4
+ 54-bit 2-to-1 multiplexer                             : 4
+ 55-bit 2-to-1 multiplexer                             : 4
+ 56-bit 2-to-1 multiplexer                             : 4
+ 57-bit 2-to-1 multiplexer                             : 4
+ 58-bit 2-to-1 multiplexer                             : 4
+ 59-bit 2-to-1 multiplexer                             : 4
+ 6-bit 2-to-1 multiplexer                              : 4
+ 60-bit 2-to-1 multiplexer                             : 4
+ 61-bit 2-to-1 multiplexer                             : 4
+ 62-bit 2-to-1 multiplexer                             : 4
+ 63-bit 2-to-1 multiplexer                             : 4
+ 64-bit 2-to-1 multiplexer                             : 1442
+ 7-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 4
+ 9-bit 2-to-1 multiplexer                              : 4
+# Logic shifters                                       : 57
+ 1472-bit shifter logical left                         : 14
+ 1472-bit shifter logical right                        : 19
+ 1856-bit shifter logical right                        : 4
+ 64-bit shifter logical left                           : 16
+ 960-bit shifter logical right                         : 4
+# Xors                                                 : 156
+ 64-bit xor2                                           : 156
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <chess>.
+The following registers are absorbed into counter <cursor_rank>: 1 register on signal <cursor_rank>.
+The following registers are absorbed into counter <cursor_file>: 1 register on signal <cursor_file>.
+Unit <chess> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 70
+ 11-bit subtractor                                     : 12
+ 32-bit adder                                          : 6
+ 4-bit adder                                           : 10
+ 4-bit subtractor                                      : 5
+ 5-bit adder                                           : 7
+ 6-bit adder                                           : 7
+ 64-bit subtractor                                     : 16
+ 7-bit adder                                           : 6
+ 8-bit adder                                           : 1
+# Counters                                             : 2
+ 3-bit updown counter                                  : 2
+# Registers                                            : 846
+ Flip-Flops                                            : 846
+# Comparators                                          : 3
+ 3-bit comparator greater                              : 1
+ 32-bit comparator equal                               : 2
+# Multiplexers                                         : 2450
+ 1-bit 2-to-1 multiplexer                              : 732
+ 1-bit 64-to-1 multiplexer                             : 7
+ 10-bit 2-to-1 multiplexer                             : 4
+ 11-bit 2-to-1 multiplexer                             : 4
+ 12-bit 2-to-1 multiplexer                             : 4
+ 13-bit 2-to-1 multiplexer                             : 4
+ 14-bit 2-to-1 multiplexer                             : 4
+ 15-bit 2-to-1 multiplexer                             : 4
+ 16-bit 2-to-1 multiplexer                             : 4
+ 17-bit 2-to-1 multiplexer                             : 4
+ 18-bit 2-to-1 multiplexer                             : 4
+ 19-bit 2-to-1 multiplexer                             : 4
+ 2-bit 2-to-1 multiplexer                              : 4
+ 20-bit 2-to-1 multiplexer                             : 4
+ 21-bit 2-to-1 multiplexer                             : 4
+ 22-bit 2-to-1 multiplexer                             : 4
+ 23-bit 2-to-1 multiplexer                             : 4
+ 24-bit 2-to-1 multiplexer                             : 4
+ 25-bit 2-to-1 multiplexer                             : 4
+ 26-bit 2-to-1 multiplexer                             : 4
+ 27-bit 2-to-1 multiplexer                             : 4
+ 28-bit 2-to-1 multiplexer                             : 4
+ 29-bit 2-to-1 multiplexer                             : 4
+ 3-bit 2-to-1 multiplexer                              : 12
+ 30-bit 2-to-1 multiplexer                             : 4
+ 31-bit 2-to-1 multiplexer                             : 4
+ 32-bit 2-to-1 multiplexer                             : 16
+ 33-bit 2-to-1 multiplexer                             : 4
+ 34-bit 2-to-1 multiplexer                             : 4
+ 35-bit 2-to-1 multiplexer                             : 4
+ 36-bit 2-to-1 multiplexer                             : 4
+ 37-bit 2-to-1 multiplexer                             : 4
+ 38-bit 2-to-1 multiplexer                             : 4
+ 39-bit 2-to-1 multiplexer                             : 4
+ 4-bit 2-to-1 multiplexer                              : 5
+ 40-bit 2-to-1 multiplexer                             : 4
+ 41-bit 2-to-1 multiplexer                             : 4
+ 42-bit 2-to-1 multiplexer                             : 4
+ 43-bit 2-to-1 multiplexer                             : 4
+ 44-bit 2-to-1 multiplexer                             : 4
+ 45-bit 2-to-1 multiplexer                             : 4
+ 46-bit 2-to-1 multiplexer                             : 4
+ 47-bit 2-to-1 multiplexer                             : 4
+ 48-bit 2-to-1 multiplexer                             : 4
+ 49-bit 2-to-1 multiplexer                             : 4
+ 5-bit 2-to-1 multiplexer                              : 4
+ 50-bit 2-to-1 multiplexer                             : 4
+ 51-bit 2-to-1 multiplexer                             : 4
+ 52-bit 2-to-1 multiplexer                             : 4
+ 53-bit 2-to-1 multiplexer                             : 4
+ 54-bit 2-to-1 multiplexer                             : 4
+ 55-bit 2-to-1 multiplexer                             : 4
+ 56-bit 2-to-1 multiplexer                             : 4
+ 57-bit 2-to-1 multiplexer                             : 4
+ 58-bit 2-to-1 multiplexer                             : 4
+ 59-bit 2-to-1 multiplexer                             : 4
+ 6-bit 2-to-1 multiplexer                              : 4
+ 60-bit 2-to-1 multiplexer                             : 4
+ 61-bit 2-to-1 multiplexer                             : 4
+ 62-bit 2-to-1 multiplexer                             : 4
+ 63-bit 2-to-1 multiplexer                             : 4
+ 64-bit 2-to-1 multiplexer                             : 1442
+ 7-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 4
+ 9-bit 2-to-1 multiplexer                              : 4
+# Logic shifters                                       : 56
+ 1472-bit shifter logical left                         : 13
+ 1472-bit shifter logical right                        : 19
+ 1856-bit shifter logical right                        : 4
+ 64-bit shifter logical left                           : 16
+ 960-bit shifter logical right                         : 4
+# Xors                                                 : 156
+ 64-bit xor2                                           : 156
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <chess> ...
+
+Optimizing unit <Complete_Move_Verifier> ...
+
+Optimizing unit <Move_Verify> ...
+
+Optimizing unit <Diagonal_Attack> ...
+
+Optimizing unit <Line_Attack> ...
+
+Optimizing unit <White_Position> ...
+
+Optimizing unit <Black_Position> ...
+
+Optimizing unit <All_Position> ...
+
+Optimizing unit <White_Pawn_Push> ...
+
+Optimizing unit <Black_Pawn_Push> ...
+
+Optimizing unit <White_Pawn_Attack> ...
+
+Optimizing unit <Black_Pawn_Attack> ...
+
+Optimizing unit <Knight_Attack> ...
+
+Optimizing unit <King_Attack> ...
+
+Optimizing unit <Check_Checker> ...
+
+Optimizing unit <Castling_Checker> ...
+
+Optimizing unit <Complete_Attack_Set> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block chess, actual ratio is 36.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 852
+ Flip-Flops                                            : 852
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : chess.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 10442
+#      GND                         : 3
+#      INV                         : 3
+#      LUT2                        : 804
+#      LUT3                        : 670
+#      LUT4                        : 1409
+#      LUT5                        : 1765
+#      LUT6                        : 3713
+#      MUXCY                       : 1022
+#      MUXF7                       : 32
+#      VCC                         : 5
+#      XORCY                       : 1016
+# FlipFlops/Latches                : 852
+#      FD                          : 770
+#      FDE                         : 82
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 779
+#      IBUF                        : 5
+#      OBUF                        : 774
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             852  out of  18224     4%  
+ Number of Slice LUTs:                 8364  out of   9112    91%  
+    Number used as Logic:              8364  out of   9112    91%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   8439
+   Number with an unused Flip Flop:    7587  out of   8439    89%  
+   Number with an unused LUT:            75  out of   8439     0%  
+   Number of fully used LUT-FF pairs:   777  out of   8439     9%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                         788
+ Number of bonded IOBs:                 780  out of    232   336% (*) 
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 852   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 36.892ns (Maximum Frequency: 27.106MHz)
+   Minimum input arrival time before clock: 3.328ns
+   Maximum output required time after clock: 4.756ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 36.892ns (frequency: 27.106MHz)
+  Total number of paths / destination ports: 387293950372639340000 / 927
+-------------------------------------------------------------------------
+Delay:               36.892ns (Levels of Logic = 90)
+  Source:            old_rank_0 (FF)
+  Destination:       en_passant_bitboard_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: old_rank_0 to en_passant_bitboard_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q            480   0.447   2.451  old_rank_0 (old_rank_0)
+     begin scope: 'cmv:old_rank<0>'
+     begin scope: 'cmv/mv:old_rank<0>'
+     LUT6:I0->O           44   0.203   1.691  Sh533581 (Sh53358)
+     LUT6:I3->O            1   0.205   0.827  out122 (out121)
+     LUT6:I2->O            1   0.203   0.684  out127 (out126)
+     LUT6:I4->O            1   0.203   0.580  out1228 (out1227)
+     LUT5:I4->O            9   0.205   0.830  out1256 (old_square_bitboard[63]_reduce_or_61_o)
+     LUT6:I5->O            2   0.205   0.981  Mmux_move_is_valid2151 (Mmux_move_is_valid2150)
+     LUT6:I0->O            1   0.203   0.000  Mmux_move_is_valid2178_SW1_F (N133)
+     MUXF7:I0->O           1   0.131   0.684  Mmux_move_is_valid2178_SW1 (N99)
+     LUT6:I4->O           14   0.203   0.958  Mmux_move_is_valid2227 (Mmux_move_is_valid2226)
+     LUT6:I5->O           13   0.205   0.933  Mmux_move_is_valid2228_1 (Mmux_move_is_valid2228)
+     LUT6:I5->O            4   0.205   0.788  new_piece_bitboards_flattened<372>1 (new_piece_bitboards_flattened<372>)
+     end scope: 'cmv/mv:new_piece_bitboards_flattened<372>'
+     begin scope: 'cmv/cc1:piece_bitboards_flattened<372>'
+     LUT3:I1->O           18   0.203   1.050  Mmux_king_bitboard481 (king_bitboard<52>)
+     LUT6:I5->O            2   0.205   0.617  out5_SW0 (N8)
+     LUT6:I5->O            1   0.205   0.000  out5_G (N248)
+     MUXF7:I1->O           7   0.140   0.878  out5 (king_bitboard[55]_reduce_or_13_o)
+     LUT6:I4->O          575   0.203   2.106  king_rank<1>1 (king_rank<1>)
+     LUT6:I5->O            1   0.205   0.000  Mmux_GND_17_o_king_bitboard[63]_Mux_22_o_4 (Mmux_GND_17_o_king_bitboard[63]_Mux_22_o_4)
+     MUXF7:I0->O           2   0.131   0.864  Mmux_GND_17_o_king_bitboard[63]_Mux_22_o_2_f7 (GND_17_o_king_bitboard[63]_Mux_22_o)
+     LUT6:I2->O            1   0.203   0.580  Mmux_king_file11 (Mmux_king_file1)
+     LUT2:I1->O          685   0.205   2.132  Mmux_king_file12 (king_file<0>)
+     begin scope: 'cmv/cc1/la:file<0>'
+     LUT6:I5->O            1   0.205   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_lut<1> (Msub_occupied[63]_GND_14_o_sub_8_OUT_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<1> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<2> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<3> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<4> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<5> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<6> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<7> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<8> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<9> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<10> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<11> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<12> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<13> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<14> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<15> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<16> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<17> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<18> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<19> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<20> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<21> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<22> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<23> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<24> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<25> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<26> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<27> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<28> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<29> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<29>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<30> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<30>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<31> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<31>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<32> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<32>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<33> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<33>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<34> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<34>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<35> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<35>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<36> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<36>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<37> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<37>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<38> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<38>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<39> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<39>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<40> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<40>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<41> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<41>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<42> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<42>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<43> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<43>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<44> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<44>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<45> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<45>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<46> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<46>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<47> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<47>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<48> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<48>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<49> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<49>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<50> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<50>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<51> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<51>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<52> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<52>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<53> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<53>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<54> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<54>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<55> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<55>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<56> (Msub_occupied[63]_GND_14_o_sub_8_OUT_cy<56>)
+     XORCY:CI->O           1   0.180   0.580  Msub_occupied[63]_GND_14_o_sub_8_OUT_xor<57> (occupied[63]_GND_14_o_sub_8_OUT<57>)
+     LUT6:I5->O            1   0.205   0.580  line_attack<57>1 (line_attack<57>1)
+     LUT5:I4->O            4   0.205   0.788  line_attack<57>2 (line_attack<57>)
+     end scope: 'cmv/cc1/la:line_attack<57>'
+     LUT4:I2->O            1   0.203   0.684  Mmux_is_in_check112_SW0 (N215)
+     LUT5:I3->O            1   0.203   0.808  Mmux_is_in_check114 (Mmux_is_in_check113)
+     LUT6:I3->O            1   0.205   0.684  Mmux_is_in_check116 (Mmux_is_in_check115)
+     LUT6:I4->O            1   0.203   0.924  Mmux_is_in_check117 (Mmux_is_in_check116)
+     LUT6:I1->O          851   0.203   2.172  Mmux_is_in_check1395 (is_in_check)
+     end scope: 'cmv/cc1:is_in_check'
+     LUT2:I1->O          833   0.205   2.167  move_is_valid1 (move_is_valid)
+     end scope: 'cmv:move_is_valid'
+     FDE:CE                    0.322          en_passant_bitboard_0
+    ----------------------------------------
+    Total                     36.892ns (7.874ns logic, 29.018ns route)
+                                       (21.3% logic, 78.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 38 / 23
+-------------------------------------------------------------------------
+Offset:              3.328ns (Levels of Logic = 2)
+  Source:            btnU (PAD)
+  Destination:       cursor_file_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: btnU to cursor_file_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.222   0.931  btnU_IBUF (btnU_IBUF)
+     LUT4:I0->O            3   0.203   0.650  _n0085_inv1 (_n0085_inv)
+     FDE:CE                    0.322          cursor_file_0
+    ----------------------------------------
+    Total                      3.328ns (1.747ns logic, 1.581ns route)
+                                       (52.5% logic, 47.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 774 / 774
+-------------------------------------------------------------------------
+Offset:              4.756ns (Levels of Logic = 1)
+  Source:            board_state_708 (FF)
+  Destination:       board_state<708> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: board_state_708 to board_state<708>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              79   0.447   1.738  board_state_708 (board_state_708)
+     OBUF:I->O                 2.571          board_state_708_OBUF (board_state<708>)
+    ----------------------------------------
+    Total                      4.756ns (3.018ns logic, 1.738ns route)
+                                       (63.5% logic, 36.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   36.892|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 141.00 secs
+Total CPU time to Xst completion: 141.05 secs
+ 
+--> 
+
+Total memory usage is 5861244 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   24 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
