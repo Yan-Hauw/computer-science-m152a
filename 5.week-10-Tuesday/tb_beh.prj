@@ -1,0 +1,7 @@
+verilog work "src_lab1/src (1)/rtl/uart_fifo.v"
+verilog work "src_lab1/src (1)/rtl/uart.v"
+verilog work "src_lab1/src (1)/rtl/uart_top.v"
+verilog work "tb/model_uart.v"
+verilog work "src_lab1/src (1)/rtl/nexys3.v"
+verilog work "tb/tb.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

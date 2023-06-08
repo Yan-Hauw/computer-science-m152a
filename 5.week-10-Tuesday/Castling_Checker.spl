@@ -1,0 +1,14 @@
+[Inputs]
+is_white
+=old_file[2:0]=
+=old_rank[2:0]=
+=new_file[2:0]=
+=new_rank[2:0]=
+=piece_bitboards_flattened[767:0]=
+[Outputs]
+castling_is_valid
+=new_piece_bitboards_flattened[767:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Castling_Checker
+

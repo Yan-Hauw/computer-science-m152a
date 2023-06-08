@@ -1,0 +1,3 @@
+verilog work "src_lab1/src (1)/rtl/uart_fifo.v"
+verilog work "src_lab1/src (1)/rtl/uart.v"
+verilog work "src_lab1/src (1)/rtl/uart_top.v"

@@ -1,0 +1,838 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Jun 06 13:21:06 2023
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "btnD" LOCATE = SITE "P18" LEVEL 1;
+COMP "btnL" LOCATE = SITE "P17" LEVEL 1;
+COMP "btnR" LOCATE = SITE "M17" LEVEL 1;
+COMP "btnS" LOCATE = SITE "N17" LEVEL 1;
+COMP "btnU" LOCATE = SITE "M18" LEVEL 1;
+COMP "sw<0>" LOCATE = SITE "J15" LEVEL 1;
+COMP "sw<1>" LOCATE = SITE "L16" LEVEL 1;
+COMP "sw<2>" LOCATE = SITE "M13" LEVEL 1;
+COMP "sw<3>" LOCATE = SITE "R15" LEVEL 1;
+COMP "sw<4>" LOCATE = SITE "R17" LEVEL 1;
+COMP "sw<5>" LOCATE = SITE "T18" LEVEL 1;
+COMP "sw<6>" LOCATE = SITE "U18" LEVEL 1;
+COMP "sw<7>" LOCATE = SITE "R13" LEVEL 1;
+COMP "Led<0>" LOCATE = SITE "H17" LEVEL 1;
+COMP "Led<1>" LOCATE = SITE "K15" LEVEL 1;
+COMP "Led<2>" LOCATE = SITE "J13" LEVEL 1;
+COMP "Led<3>" LOCATE = SITE "N14" LEVEL 1;
+COMP "Led<4>" LOCATE = SITE "R18" LEVEL 1;
+COMP "Led<5>" LOCATE = SITE "V17" LEVEL 1;
+COMP "Led<6>" LOCATE = SITE "U17" LEVEL 1;
+COMP "Led<7>" LOCATE = SITE "U16" LEVEL 1;
+COMP "RsRx" LOCATE = SITE "C4" LEVEL 1;
+COMP "RsTx" LOCATE = SITE "D4" LEVEL 1;
+COMP "clk" LOCATE = SITE "E3" LEVEL 1;
+PIN Maddsub_cursor_rank[2]_PWR_1_o_MuLt_1562_OUT_pins<117> = BEL
+        "Maddsub_cursor_rank[2]_PWR_1_o_MuLt_1562_OUT" PINNAME CLK;
+PIN "Msub_GND_1_o_GND_1_o_sub_1566_OUT<6:0>1_pins<117>" = BEL
+        "Msub_GND_1_o_GND_1_o_sub_1566_OUT<6:0>1" PINNAME CLK;
+PIN uart_top_/tfifo_/Mram_mem_pins<32> = BEL "uart_top_/tfifo_/Mram_mem"
+        PINNAME CLKARDCLK;
+PIN uart_top_/tfifo_/Mram_mem_pins<33> = BEL "uart_top_/tfifo_/Mram_mem"
+        PINNAME CLKBWRCLK;
+TIMEGRP sys_clk_pin = BEL "bL" BEL "bS" BEL "bU" BEL "bD" BEL "bR" BEL
+        "prev_clkBLINKING" BEL "clk_en" BEL "clk_dv_0" BEL "clk_dv_1" BEL
+        "clk_dv_2" BEL "clk_dv_3" BEL "clk_dv_4" BEL "clk_dv_5" BEL "clk_dv_6"
+        BEL "clk_dv_7" BEL "clk_dv_8" BEL "clk_dv_9" BEL "clk_dv_10" BEL
+        "clk_dv_11" BEL "clk_dv_12" BEL "clk_dv_13" BEL "clk_dv_14" BEL
+        "clk_dv_15" BEL "clk_dv_16" BEL "inst_wd_0" BEL "clk_en_d" BEL
+        "stepL_0" BEL "stepS_0" BEL "stepU_0" BEL "stepD_0" BEL "stepR_0" PIN
+        "Maddsub_cursor_rank[2]_PWR_1_o_MuLt_1562_OUT_pins<117>" BEL
+        "clkBLINKING_17" BEL "clkBLINKING_18" BEL "clkBLINKING_19" BEL
+        "clkBLINKING_20" BEL "clkBLINKING_21" BEL "clkBLINKING_22" BEL
+        "clkBLINKING_23" BEL "clkBLINKING_24" BEL "clkBLINKING_25" BEL
+        "clkBLINKING_26" PIN
+        "Msub_GND_1_o_GND_1_o_sub_1566_OUT<6:0>1_pins<117>" BEL
+        "uart_top_/state_7" BEL "uart_top_/state_6" BEL "uart_top_/state_5"
+        BEL "uart_top_/state_4" BEL "uart_top_/state_3" BEL
+        "uart_top_/state_2" BEL "uart_top_/state_1" BEL "uart_top_/state_0"
+        BEL "uart_top_/tfifo_rd_z" BEL "uart_top_/tx_data_678" BEL
+        "uart_top_/tx_data_677" BEL "uart_top_/tx_data_676" BEL
+        "uart_top_/tx_data_675" BEL "uart_top_/tx_data_674" BEL
+        "uart_top_/tx_data_673" BEL "uart_top_/tx_data_672" BEL
+        "uart_top_/tx_data_670" BEL "uart_top_/tx_data_669" BEL
+        "uart_top_/tx_data_668" BEL "uart_top_/tx_data_667" BEL
+        "uart_top_/tx_data_666" BEL "uart_top_/tx_data_665" BEL
+        "uart_top_/tx_data_664" BEL "uart_top_/tx_data_662" BEL
+        "uart_top_/tx_data_661" BEL "uart_top_/tx_data_660" BEL
+        "uart_top_/tx_data_659" BEL "uart_top_/tx_data_658" BEL
+        "uart_top_/tx_data_657" BEL "uart_top_/tx_data_656" BEL
+        "uart_top_/tx_data_654" BEL "uart_top_/tx_data_653" BEL
+        "uart_top_/tx_data_652" BEL "uart_top_/tx_data_651" BEL
+        "uart_top_/tx_data_650" BEL "uart_top_/tx_data_649" BEL
+        "uart_top_/tx_data_648" BEL "uart_top_/tx_data_646" BEL
+        "uart_top_/tx_data_645" BEL "uart_top_/tx_data_644" BEL
+        "uart_top_/tx_data_643" BEL "uart_top_/tx_data_642" BEL
+        "uart_top_/tx_data_641" BEL "uart_top_/tx_data_640" BEL
+        "uart_top_/tx_data_638" BEL "uart_top_/tx_data_637" BEL
+        "uart_top_/tx_data_636" BEL "uart_top_/tx_data_635" BEL
+        "uart_top_/tx_data_634" BEL "uart_top_/tx_data_633" BEL
+        "uart_top_/tx_data_632" BEL "uart_top_/tx_data_630" BEL
+        "uart_top_/tx_data_629" BEL "uart_top_/tx_data_628" BEL
+        "uart_top_/tx_data_627" BEL "uart_top_/tx_data_626" BEL
+        "uart_top_/tx_data_625" BEL "uart_top_/tx_data_624" BEL
+        "uart_top_/tx_data_622" BEL "uart_top_/tx_data_621" BEL
+        "uart_top_/tx_data_620" BEL "uart_top_/tx_data_619" BEL
+        "uart_top_/tx_data_618" BEL "uart_top_/tx_data_617" BEL
+        "uart_top_/tx_data_616" BEL "uart_top_/tx_data_614" BEL
+        "uart_top_/tx_data_613" BEL "uart_top_/tx_data_612" BEL
+        "uart_top_/tx_data_611" BEL "uart_top_/tx_data_610" BEL
+        "uart_top_/tx_data_609" BEL "uart_top_/tx_data_608" BEL
+        "uart_top_/tx_data_606" BEL "uart_top_/tx_data_605" BEL
+        "uart_top_/tx_data_604" BEL "uart_top_/tx_data_603" BEL
+        "uart_top_/tx_data_602" BEL "uart_top_/tx_data_601" BEL
+        "uart_top_/tx_data_600" BEL "uart_top_/tx_data_598" BEL
+        "uart_top_/tx_data_597" BEL "uart_top_/tx_data_596" BEL
+        "uart_top_/tx_data_595" BEL "uart_top_/tx_data_594" BEL
+        "uart_top_/tx_data_593" BEL "uart_top_/tx_data_592" BEL
+        "uart_top_/tx_data_590" BEL "uart_top_/tx_data_589" BEL
+        "uart_top_/tx_data_588" BEL "uart_top_/tx_data_587" BEL
+        "uart_top_/tx_data_586" BEL "uart_top_/tx_data_585" BEL
+        "uart_top_/tx_data_584" BEL "uart_top_/tx_data_582" BEL
+        "uart_top_/tx_data_581" BEL "uart_top_/tx_data_580" BEL
+        "uart_top_/tx_data_579" BEL "uart_top_/tx_data_578" BEL
+        "uart_top_/tx_data_577" BEL "uart_top_/tx_data_576" BEL
+        "uart_top_/tx_data_574" BEL "uart_top_/tx_data_573" BEL
+        "uart_top_/tx_data_572" BEL "uart_top_/tx_data_571" BEL
+        "uart_top_/tx_data_570" BEL "uart_top_/tx_data_569" BEL
+        "uart_top_/tx_data_568" BEL "uart_top_/tx_data_566" BEL
+        "uart_top_/tx_data_565" BEL "uart_top_/tx_data_564" BEL
+        "uart_top_/tx_data_563" BEL "uart_top_/tx_data_562" BEL
+        "uart_top_/tx_data_561" BEL "uart_top_/tx_data_560" BEL
+        "uart_top_/tx_data_558" BEL "uart_top_/tx_data_557" BEL
+        "uart_top_/tx_data_556" BEL "uart_top_/tx_data_555" BEL
+        "uart_top_/tx_data_554" BEL "uart_top_/tx_data_553" BEL
+        "uart_top_/tx_data_552" BEL "uart_top_/tx_data_550" BEL
+        "uart_top_/tx_data_549" BEL "uart_top_/tx_data_548" BEL
+        "uart_top_/tx_data_547" BEL "uart_top_/tx_data_546" BEL
+        "uart_top_/tx_data_545" BEL "uart_top_/tx_data_544" BEL
+        "uart_top_/tx_data_542" BEL "uart_top_/tx_data_541" BEL
+        "uart_top_/tx_data_540" BEL "uart_top_/tx_data_539" BEL
+        "uart_top_/tx_data_538" BEL "uart_top_/tx_data_537" BEL
+        "uart_top_/tx_data_536" BEL "uart_top_/tx_data_534" BEL
+        "uart_top_/tx_data_533" BEL "uart_top_/tx_data_532" BEL
+        "uart_top_/tx_data_531" BEL "uart_top_/tx_data_530" BEL
+        "uart_top_/tx_data_529" BEL "uart_top_/tx_data_528" BEL
+        "uart_top_/tx_data_526" BEL "uart_top_/tx_data_525" BEL
+        "uart_top_/tx_data_524" BEL "uart_top_/tx_data_523" BEL
+        "uart_top_/tx_data_522" BEL "uart_top_/tx_data_521" BEL
+        "uart_top_/tx_data_520" BEL "uart_top_/tx_data_518" BEL
+        "uart_top_/tx_data_517" BEL "uart_top_/tx_data_516" BEL
+        "uart_top_/tx_data_515" BEL "uart_top_/tx_data_514" BEL
+        "uart_top_/tx_data_513" BEL "uart_top_/tx_data_512" BEL
+        "uart_top_/tx_data_510" BEL "uart_top_/tx_data_509" BEL
+        "uart_top_/tx_data_508" BEL "uart_top_/tx_data_507" BEL
+        "uart_top_/tx_data_506" BEL "uart_top_/tx_data_505" BEL
+        "uart_top_/tx_data_504" BEL "uart_top_/tx_data_502" BEL
+        "uart_top_/tx_data_501" BEL "uart_top_/tx_data_500" BEL
+        "uart_top_/tx_data_499" BEL "uart_top_/tx_data_498" BEL
+        "uart_top_/tx_data_497" BEL "uart_top_/tx_data_496" BEL
+        "uart_top_/tx_data_494" BEL "uart_top_/tx_data_493" BEL
+        "uart_top_/tx_data_492" BEL "uart_top_/tx_data_491" BEL
+        "uart_top_/tx_data_490" BEL "uart_top_/tx_data_489" BEL
+        "uart_top_/tx_data_488" BEL "uart_top_/tx_data_486" BEL
+        "uart_top_/tx_data_485" BEL "uart_top_/tx_data_484" BEL
+        "uart_top_/tx_data_483" BEL "uart_top_/tx_data_482" BEL
+        "uart_top_/tx_data_481" BEL "uart_top_/tx_data_480" BEL
+        "uart_top_/tx_data_478" BEL "uart_top_/tx_data_477" BEL
+        "uart_top_/tx_data_476" BEL "uart_top_/tx_data_475" BEL
+        "uart_top_/tx_data_474" BEL "uart_top_/tx_data_473" BEL
+        "uart_top_/tx_data_472" BEL "uart_top_/tx_data_470" BEL
+        "uart_top_/tx_data_469" BEL "uart_top_/tx_data_468" BEL
+        "uart_top_/tx_data_467" BEL "uart_top_/tx_data_466" BEL
+        "uart_top_/tx_data_465" BEL "uart_top_/tx_data_464" BEL
+        "uart_top_/tx_data_462" BEL "uart_top_/tx_data_461" BEL
+        "uart_top_/tx_data_460" BEL "uart_top_/tx_data_459" BEL
+        "uart_top_/tx_data_458" BEL "uart_top_/tx_data_457" BEL
+        "uart_top_/tx_data_456" BEL "uart_top_/tx_data_454" BEL
+        "uart_top_/tx_data_453" BEL "uart_top_/tx_data_452" BEL
+        "uart_top_/tx_data_451" BEL "uart_top_/tx_data_450" BEL
+        "uart_top_/tx_data_449" BEL "uart_top_/tx_data_448" BEL
+        "uart_top_/tx_data_446" BEL "uart_top_/tx_data_445" BEL
+        "uart_top_/tx_data_444" BEL "uart_top_/tx_data_443" BEL
+        "uart_top_/tx_data_442" BEL "uart_top_/tx_data_441" BEL
+        "uart_top_/tx_data_440" BEL "uart_top_/tx_data_438" BEL
+        "uart_top_/tx_data_437" BEL "uart_top_/tx_data_436" BEL
+        "uart_top_/tx_data_435" BEL "uart_top_/tx_data_434" BEL
+        "uart_top_/tx_data_433" BEL "uart_top_/tx_data_432" BEL
+        "uart_top_/tx_data_430" BEL "uart_top_/tx_data_429" BEL
+        "uart_top_/tx_data_428" BEL "uart_top_/tx_data_427" BEL
+        "uart_top_/tx_data_426" BEL "uart_top_/tx_data_425" BEL
+        "uart_top_/tx_data_424" BEL "uart_top_/tx_data_422" BEL
+        "uart_top_/tx_data_421" BEL "uart_top_/tx_data_420" BEL
+        "uart_top_/tx_data_419" BEL "uart_top_/tx_data_418" BEL
+        "uart_top_/tx_data_417" BEL "uart_top_/tx_data_416" BEL
+        "uart_top_/tx_data_414" BEL "uart_top_/tx_data_413" BEL
+        "uart_top_/tx_data_412" BEL "uart_top_/tx_data_411" BEL
+        "uart_top_/tx_data_410" BEL "uart_top_/tx_data_409" BEL
+        "uart_top_/tx_data_408" BEL "uart_top_/tx_data_406" BEL
+        "uart_top_/tx_data_405" BEL "uart_top_/tx_data_404" BEL
+        "uart_top_/tx_data_403" BEL "uart_top_/tx_data_402" BEL
+        "uart_top_/tx_data_401" BEL "uart_top_/tx_data_400" BEL
+        "uart_top_/tx_data_398" BEL "uart_top_/tx_data_397" BEL
+        "uart_top_/tx_data_396" BEL "uart_top_/tx_data_395" BEL
+        "uart_top_/tx_data_394" BEL "uart_top_/tx_data_393" BEL
+        "uart_top_/tx_data_392" BEL "uart_top_/tx_data_390" BEL
+        "uart_top_/tx_data_389" BEL "uart_top_/tx_data_388" BEL
+        "uart_top_/tx_data_387" BEL "uart_top_/tx_data_386" BEL
+        "uart_top_/tx_data_385" BEL "uart_top_/tx_data_384" BEL
+        "uart_top_/tx_data_382" BEL "uart_top_/tx_data_381" BEL
+        "uart_top_/tx_data_380" BEL "uart_top_/tx_data_379" BEL
+        "uart_top_/tx_data_378" BEL "uart_top_/tx_data_377" BEL
+        "uart_top_/tx_data_376" BEL "uart_top_/tx_data_374" BEL
+        "uart_top_/tx_data_373" BEL "uart_top_/tx_data_372" BEL
+        "uart_top_/tx_data_371" BEL "uart_top_/tx_data_370" BEL
+        "uart_top_/tx_data_369" BEL "uart_top_/tx_data_368" BEL
+        "uart_top_/tx_data_366" BEL "uart_top_/tx_data_365" BEL
+        "uart_top_/tx_data_364" BEL "uart_top_/tx_data_363" BEL
+        "uart_top_/tx_data_362" BEL "uart_top_/tx_data_361" BEL
+        "uart_top_/tx_data_360" BEL "uart_top_/tx_data_358" BEL
+        "uart_top_/tx_data_357" BEL "uart_top_/tx_data_356" BEL
+        "uart_top_/tx_data_355" BEL "uart_top_/tx_data_354" BEL
+        "uart_top_/tx_data_353" BEL "uart_top_/tx_data_352" BEL
+        "uart_top_/tx_data_350" BEL "uart_top_/tx_data_349" BEL
+        "uart_top_/tx_data_348" BEL "uart_top_/tx_data_347" BEL
+        "uart_top_/tx_data_346" BEL "uart_top_/tx_data_345" BEL
+        "uart_top_/tx_data_344" BEL "uart_top_/tx_data_342" BEL
+        "uart_top_/tx_data_341" BEL "uart_top_/tx_data_340" BEL
+        "uart_top_/tx_data_339" BEL "uart_top_/tx_data_338" BEL
+        "uart_top_/tx_data_337" BEL "uart_top_/tx_data_336" BEL
+        "uart_top_/tx_data_334" BEL "uart_top_/tx_data_333" BEL
+        "uart_top_/tx_data_332" BEL "uart_top_/tx_data_331" BEL
+        "uart_top_/tx_data_330" BEL "uart_top_/tx_data_329" BEL
+        "uart_top_/tx_data_328" BEL "uart_top_/tx_data_326" BEL
+        "uart_top_/tx_data_325" BEL "uart_top_/tx_data_324" BEL
+        "uart_top_/tx_data_323" BEL "uart_top_/tx_data_322" BEL
+        "uart_top_/tx_data_321" BEL "uart_top_/tx_data_320" BEL
+        "uart_top_/tx_data_318" BEL "uart_top_/tx_data_317" BEL
+        "uart_top_/tx_data_316" BEL "uart_top_/tx_data_315" BEL
+        "uart_top_/tx_data_314" BEL "uart_top_/tx_data_313" BEL
+        "uart_top_/tx_data_312" BEL "uart_top_/tx_data_310" BEL
+        "uart_top_/tx_data_309" BEL "uart_top_/tx_data_308" BEL
+        "uart_top_/tx_data_307" BEL "uart_top_/tx_data_306" BEL
+        "uart_top_/tx_data_305" BEL "uart_top_/tx_data_304" BEL
+        "uart_top_/tx_data_302" BEL "uart_top_/tx_data_301" BEL
+        "uart_top_/tx_data_300" BEL "uart_top_/tx_data_299" BEL
+        "uart_top_/tx_data_298" BEL "uart_top_/tx_data_297" BEL
+        "uart_top_/tx_data_296" BEL "uart_top_/tx_data_294" BEL
+        "uart_top_/tx_data_293" BEL "uart_top_/tx_data_292" BEL
+        "uart_top_/tx_data_291" BEL "uart_top_/tx_data_290" BEL
+        "uart_top_/tx_data_289" BEL "uart_top_/tx_data_288" BEL
+        "uart_top_/tx_data_286" BEL "uart_top_/tx_data_285" BEL
+        "uart_top_/tx_data_284" BEL "uart_top_/tx_data_283" BEL
+        "uart_top_/tx_data_282" BEL "uart_top_/tx_data_281" BEL
+        "uart_top_/tx_data_280" BEL "uart_top_/tx_data_278" BEL
+        "uart_top_/tx_data_277" BEL "uart_top_/tx_data_276" BEL
+        "uart_top_/tx_data_275" BEL "uart_top_/tx_data_274" BEL
+        "uart_top_/tx_data_273" BEL "uart_top_/tx_data_272" BEL
+        "uart_top_/tx_data_270" BEL "uart_top_/tx_data_269" BEL
+        "uart_top_/tx_data_268" BEL "uart_top_/tx_data_267" BEL
+        "uart_top_/tx_data_266" BEL "uart_top_/tx_data_265" BEL
+        "uart_top_/tx_data_264" BEL "uart_top_/tx_data_262" BEL
+        "uart_top_/tx_data_261" BEL "uart_top_/tx_data_260" BEL
+        "uart_top_/tx_data_259" BEL "uart_top_/tx_data_258" BEL
+        "uart_top_/tx_data_257" BEL "uart_top_/tx_data_256" BEL
+        "uart_top_/tx_data_254" BEL "uart_top_/tx_data_253" BEL
+        "uart_top_/tx_data_252" BEL "uart_top_/tx_data_251" BEL
+        "uart_top_/tx_data_250" BEL "uart_top_/tx_data_249" BEL
+        "uart_top_/tx_data_248" BEL "uart_top_/tx_data_246" BEL
+        "uart_top_/tx_data_245" BEL "uart_top_/tx_data_244" BEL
+        "uart_top_/tx_data_243" BEL "uart_top_/tx_data_242" BEL
+        "uart_top_/tx_data_241" BEL "uart_top_/tx_data_240" BEL
+        "uart_top_/tx_data_238" BEL "uart_top_/tx_data_237" BEL
+        "uart_top_/tx_data_236" BEL "uart_top_/tx_data_235" BEL
+        "uart_top_/tx_data_234" BEL "uart_top_/tx_data_233" BEL
+        "uart_top_/tx_data_232" BEL "uart_top_/tx_data_230" BEL
+        "uart_top_/tx_data_229" BEL "uart_top_/tx_data_228" BEL
+        "uart_top_/tx_data_227" BEL "uart_top_/tx_data_226" BEL
+        "uart_top_/tx_data_225" BEL "uart_top_/tx_data_224" BEL
+        "uart_top_/tx_data_222" BEL "uart_top_/tx_data_221" BEL
+        "uart_top_/tx_data_220" BEL "uart_top_/tx_data_219" BEL
+        "uart_top_/tx_data_218" BEL "uart_top_/tx_data_217" BEL
+        "uart_top_/tx_data_216" BEL "uart_top_/tx_data_214" BEL
+        "uart_top_/tx_data_213" BEL "uart_top_/tx_data_212" BEL
+        "uart_top_/tx_data_211" BEL "uart_top_/tx_data_210" BEL
+        "uart_top_/tx_data_209" BEL "uart_top_/tx_data_208" BEL
+        "uart_top_/tx_data_206" BEL "uart_top_/tx_data_205" BEL
+        "uart_top_/tx_data_204" BEL "uart_top_/tx_data_203" BEL
+        "uart_top_/tx_data_202" BEL "uart_top_/tx_data_201" BEL
+        "uart_top_/tx_data_200" BEL "uart_top_/tx_data_198" BEL
+        "uart_top_/tx_data_197" BEL "uart_top_/tx_data_196" BEL
+        "uart_top_/tx_data_195" BEL "uart_top_/tx_data_194" BEL
+        "uart_top_/tx_data_193" BEL "uart_top_/tx_data_192" BEL
+        "uart_top_/tx_data_190" BEL "uart_top_/tx_data_189" BEL
+        "uart_top_/tx_data_188" BEL "uart_top_/tx_data_187" BEL
+        "uart_top_/tx_data_186" BEL "uart_top_/tx_data_185" BEL
+        "uart_top_/tx_data_184" BEL "uart_top_/tx_data_182" BEL
+        "uart_top_/tx_data_181" BEL "uart_top_/tx_data_180" BEL
+        "uart_top_/tx_data_179" BEL "uart_top_/tx_data_178" BEL
+        "uart_top_/tx_data_177" BEL "uart_top_/tx_data_176" BEL
+        "uart_top_/tx_data_174" BEL "uart_top_/tx_data_173" BEL
+        "uart_top_/tx_data_172" BEL "uart_top_/tx_data_171" BEL
+        "uart_top_/tx_data_170" BEL "uart_top_/tx_data_169" BEL
+        "uart_top_/tx_data_168" BEL "uart_top_/tx_data_166" BEL
+        "uart_top_/tx_data_165" BEL "uart_top_/tx_data_164" BEL
+        "uart_top_/tx_data_163" BEL "uart_top_/tx_data_162" BEL
+        "uart_top_/tx_data_161" BEL "uart_top_/tx_data_160" BEL
+        "uart_top_/tx_data_158" BEL "uart_top_/tx_data_157" BEL
+        "uart_top_/tx_data_156" BEL "uart_top_/tx_data_155" BEL
+        "uart_top_/tx_data_154" BEL "uart_top_/tx_data_153" BEL
+        "uart_top_/tx_data_152" BEL "uart_top_/tx_data_150" BEL
+        "uart_top_/tx_data_149" BEL "uart_top_/tx_data_148" BEL
+        "uart_top_/tx_data_147" BEL "uart_top_/tx_data_146" BEL
+        "uart_top_/tx_data_145" BEL "uart_top_/tx_data_144" BEL
+        "uart_top_/tx_data_142" BEL "uart_top_/tx_data_141" BEL
+        "uart_top_/tx_data_140" BEL "uart_top_/tx_data_139" BEL
+        "uart_top_/tx_data_138" BEL "uart_top_/tx_data_137" BEL
+        "uart_top_/tx_data_136" BEL "uart_top_/tx_data_134" BEL
+        "uart_top_/tx_data_133" BEL "uart_top_/tx_data_132" BEL
+        "uart_top_/tx_data_131" BEL "uart_top_/tx_data_130" BEL
+        "uart_top_/tx_data_129" BEL "uart_top_/tx_data_128" BEL
+        "uart_top_/tx_data_126" BEL "uart_top_/tx_data_125" BEL
+        "uart_top_/tx_data_124" BEL "uart_top_/tx_data_123" BEL
+        "uart_top_/tx_data_122" BEL "uart_top_/tx_data_121" BEL
+        "uart_top_/tx_data_120" BEL "uart_top_/tx_data_118" BEL
+        "uart_top_/tx_data_117" BEL "uart_top_/tx_data_116" BEL
+        "uart_top_/tx_data_115" BEL "uart_top_/tx_data_114" BEL
+        "uart_top_/tx_data_113" BEL "uart_top_/tx_data_112" BEL
+        "uart_top_/tx_data_110" BEL "uart_top_/tx_data_109" BEL
+        "uart_top_/tx_data_108" BEL "uart_top_/tx_data_107" BEL
+        "uart_top_/tx_data_106" BEL "uart_top_/tx_data_105" BEL
+        "uart_top_/tx_data_104" BEL "uart_top_/tx_data_102" BEL
+        "uart_top_/tx_data_101" BEL "uart_top_/tx_data_100" BEL
+        "uart_top_/tx_data_99" BEL "uart_top_/tx_data_98" BEL
+        "uart_top_/tx_data_97" BEL "uart_top_/tx_data_96" BEL
+        "uart_top_/tx_data_94" BEL "uart_top_/tx_data_93" BEL
+        "uart_top_/tx_data_92" BEL "uart_top_/tx_data_91" BEL
+        "uart_top_/tx_data_90" BEL "uart_top_/tx_data_89" BEL
+        "uart_top_/tx_data_88" BEL "uart_top_/tx_data_86" BEL
+        "uart_top_/tx_data_85" BEL "uart_top_/tx_data_84" BEL
+        "uart_top_/tx_data_83" BEL "uart_top_/tx_data_82" BEL
+        "uart_top_/tx_data_81" BEL "uart_top_/tx_data_80" BEL
+        "uart_top_/tx_data_78" BEL "uart_top_/tx_data_77" BEL
+        "uart_top_/tx_data_76" BEL "uart_top_/tx_data_75" BEL
+        "uart_top_/tx_data_74" BEL "uart_top_/tx_data_73" BEL
+        "uart_top_/tx_data_72" BEL "uart_top_/tx_data_70" BEL
+        "uart_top_/tx_data_69" BEL "uart_top_/tx_data_68" BEL
+        "uart_top_/tx_data_67" BEL "uart_top_/tx_data_66" BEL
+        "uart_top_/tx_data_65" BEL "uart_top_/tx_data_64" BEL
+        "uart_top_/tx_data_62" BEL "uart_top_/tx_data_61" BEL
+        "uart_top_/tx_data_60" BEL "uart_top_/tx_data_59" BEL
+        "uart_top_/tx_data_58" BEL "uart_top_/tx_data_57" BEL
+        "uart_top_/tx_data_56" BEL "uart_top_/tx_data_54" BEL
+        "uart_top_/tx_data_53" BEL "uart_top_/tx_data_52" BEL
+        "uart_top_/tx_data_51" BEL "uart_top_/tx_data_50" BEL
+        "uart_top_/tx_data_49" BEL "uart_top_/tx_data_46" BEL
+        "uart_top_/tx_data_45" BEL "uart_top_/tx_data_44" BEL
+        "uart_top_/tx_data_43" BEL "uart_top_/tx_data_42" BEL
+        "uart_top_/tx_data_41" BEL "uart_top_/tx_data_38" BEL
+        "uart_top_/tx_data_36" BEL "uart_top_/tx_data_35" BEL
+        "uart_top_/tx_data_34" BEL "uart_top_/tx_data_33" BEL
+        "uart_top_/tx_data_30" BEL "uart_top_/tx_data_28" BEL
+        "uart_top_/tx_data_26" BEL "uart_top_/tx_data_25" BEL
+        "uart_top_/tx_data_22" BEL "uart_top_/tx_data_20" BEL
+        "uart_top_/tx_data_18" BEL "uart_top_/tx_data_17" BEL
+        "uart_top_/uart_/tx_bits_remaining_3" BEL
+        "uart_top_/uart_/tx_bits_remaining_2" BEL
+        "uart_top_/uart_/tx_bits_remaining_1" BEL
+        "uart_top_/uart_/tx_bits_remaining_0" BEL "uart_top_/uart_/tx_out" BEL
+        "uart_top_/uart_/tx_countdown_5" BEL "uart_top_/uart_/tx_countdown_4"
+        BEL "uart_top_/uart_/tx_countdown_3" BEL
+        "uart_top_/uart_/tx_countdown_2" BEL "uart_top_/uart_/tx_countdown_1"
+        BEL "uart_top_/uart_/tx_countdown_0" BEL
+        "uart_top_/uart_/tx_clk_divider_4" BEL
+        "uart_top_/uart_/tx_clk_divider_3" BEL
+        "uart_top_/uart_/tx_clk_divider_2" BEL
+        "uart_top_/uart_/tx_clk_divider_1" BEL
+        "uart_top_/uart_/tx_clk_divider_0" BEL "uart_top_/uart_/tx_state_1"
+        BEL "uart_top_/uart_/tx_state_0" BEL "uart_top_/uart_/tx_data_7" BEL
+        "uart_top_/uart_/tx_data_6" BEL "uart_top_/uart_/tx_data_5" BEL
+        "uart_top_/uart_/tx_data_4" BEL "uart_top_/uart_/tx_data_3" BEL
+        "uart_top_/uart_/tx_data_2" BEL "uart_top_/uart_/tx_data_1" BEL
+        "uart_top_/uart_/tx_data_0" BEL "uart_top_/tfifo_/rp_9" BEL
+        "uart_top_/tfifo_/rp_8" BEL "uart_top_/tfifo_/rp_7" BEL
+        "uart_top_/tfifo_/rp_6" BEL "uart_top_/tfifo_/rp_5" BEL
+        "uart_top_/tfifo_/rp_4" BEL "uart_top_/tfifo_/rp_3" BEL
+        "uart_top_/tfifo_/rp_2" BEL "uart_top_/tfifo_/rp_1" BEL
+        "uart_top_/tfifo_/rp_0" BEL "uart_top_/tfifo_/wp_9" BEL
+        "uart_top_/tfifo_/wp_8" BEL "uart_top_/tfifo_/wp_7" BEL
+        "uart_top_/tfifo_/wp_6" BEL "uart_top_/tfifo_/wp_5" BEL
+        "uart_top_/tfifo_/wp_4" BEL "uart_top_/tfifo_/wp_3" BEL
+        "uart_top_/tfifo_/wp_2" BEL "uart_top_/tfifo_/wp_1" BEL
+        "uart_top_/tfifo_/wp_0" BEL "uart_top_/tfifo_/fifo_empty" BEL
+        "uart_top_/tfifo_/fifo_full" BEL "uart_top_/tfifo_/fifo_cnt_9" BEL
+        "uart_top_/tfifo_/fifo_cnt_8" BEL "uart_top_/tfifo_/fifo_cnt_7" BEL
+        "uart_top_/tfifo_/fifo_cnt_6" BEL "uart_top_/tfifo_/fifo_cnt_5" BEL
+        "uart_top_/tfifo_/fifo_cnt_4" BEL "uart_top_/tfifo_/fifo_cnt_3" BEL
+        "uart_top_/tfifo_/fifo_cnt_2" BEL "uart_top_/tfifo_/fifo_cnt_1" BEL
+        "uart_top_/tfifo_/fifo_cnt_0" BEL "c_module/cursor_rank_2" BEL
+        "c_module/cursor_rank_1" BEL "c_module/cursor_rank_0" BEL
+        "c_module/cursor_file_2" BEL "c_module/cursor_file_1" BEL
+        "c_module/cursor_file_0" BEL "c_module/is_white_output" BEL
+        "c_module/is_white" BEL "c_module/old_file_2" BEL
+        "c_module/old_file_1" BEL "c_module/old_file_0" BEL
+        "c_module/new_rank_2" BEL "c_module/new_rank_1" BEL
+        "c_module/new_rank_0" BEL "c_module/old_rank_2" BEL
+        "c_module/old_rank_1" BEL "c_module/old_rank_0" BEL
+        "c_module/new_file_2" BEL "c_module/new_file_1" BEL
+        "c_module/new_file_0" BEL "c_module/en_passant_bitboard_63" BEL
+        "c_module/en_passant_bitboard_62" BEL
+        "c_module/en_passant_bitboard_61" BEL
+        "c_module/en_passant_bitboard_60" BEL
+        "c_module/en_passant_bitboard_59" BEL
+        "c_module/en_passant_bitboard_58" BEL
+        "c_module/en_passant_bitboard_57" BEL
+        "c_module/en_passant_bitboard_56" BEL
+        "c_module/en_passant_bitboard_55" BEL
+        "c_module/en_passant_bitboard_54" BEL
+        "c_module/en_passant_bitboard_53" BEL
+        "c_module/en_passant_bitboard_52" BEL
+        "c_module/en_passant_bitboard_51" BEL
+        "c_module/en_passant_bitboard_50" BEL
+        "c_module/en_passant_bitboard_49" BEL
+        "c_module/en_passant_bitboard_48" BEL
+        "c_module/en_passant_bitboard_47" BEL
+        "c_module/en_passant_bitboard_46" BEL
+        "c_module/en_passant_bitboard_45" BEL
+        "c_module/en_passant_bitboard_44" BEL
+        "c_module/en_passant_bitboard_43" BEL
+        "c_module/en_passant_bitboard_42" BEL
+        "c_module/en_passant_bitboard_41" BEL
+        "c_module/en_passant_bitboard_40" BEL
+        "c_module/en_passant_bitboard_39" BEL
+        "c_module/en_passant_bitboard_38" BEL
+        "c_module/en_passant_bitboard_37" BEL
+        "c_module/en_passant_bitboard_36" BEL
+        "c_module/en_passant_bitboard_35" BEL
+        "c_module/en_passant_bitboard_34" BEL
+        "c_module/en_passant_bitboard_33" BEL
+        "c_module/en_passant_bitboard_32" BEL
+        "c_module/en_passant_bitboard_31" BEL
+        "c_module/en_passant_bitboard_30" BEL
+        "c_module/en_passant_bitboard_29" BEL
+        "c_module/en_passant_bitboard_28" BEL
+        "c_module/en_passant_bitboard_27" BEL
+        "c_module/en_passant_bitboard_26" BEL
+        "c_module/en_passant_bitboard_25" BEL
+        "c_module/en_passant_bitboard_24" BEL
+        "c_module/en_passant_bitboard_23" BEL
+        "c_module/en_passant_bitboard_22" BEL
+        "c_module/en_passant_bitboard_21" BEL
+        "c_module/en_passant_bitboard_20" BEL
+        "c_module/en_passant_bitboard_19" BEL
+        "c_module/en_passant_bitboard_18" BEL
+        "c_module/en_passant_bitboard_17" BEL
+        "c_module/en_passant_bitboard_16" BEL
+        "c_module/en_passant_bitboard_15" BEL
+        "c_module/en_passant_bitboard_14" BEL
+        "c_module/en_passant_bitboard_13" BEL
+        "c_module/en_passant_bitboard_12" BEL
+        "c_module/en_passant_bitboard_11" BEL
+        "c_module/en_passant_bitboard_10" BEL "c_module/en_passant_bitboard_9"
+        BEL "c_module/en_passant_bitboard_8" BEL
+        "c_module/en_passant_bitboard_7" BEL "c_module/en_passant_bitboard_6"
+        BEL "c_module/en_passant_bitboard_5" BEL
+        "c_module/en_passant_bitboard_4" BEL "c_module/en_passant_bitboard_3"
+        BEL "c_module/en_passant_bitboard_2" BEL
+        "c_module/en_passant_bitboard_1" BEL "c_module/en_passant_bitboard_0"
+        BEL "c_module/board_state_767" BEL "c_module/board_state_766" BEL
+        "c_module/board_state_765" BEL "c_module/board_state_764" BEL
+        "c_module/board_state_763" BEL "c_module/board_state_762" BEL
+        "c_module/board_state_761" BEL "c_module/board_state_760" BEL
+        "c_module/board_state_759" BEL "c_module/board_state_758" BEL
+        "c_module/board_state_757" BEL "c_module/board_state_756" BEL
+        "c_module/board_state_755" BEL "c_module/board_state_754" BEL
+        "c_module/board_state_753" BEL "c_module/board_state_752" BEL
+        "c_module/board_state_751" BEL "c_module/board_state_750" BEL
+        "c_module/board_state_749" BEL "c_module/board_state_748" BEL
+        "c_module/board_state_747" BEL "c_module/board_state_746" BEL
+        "c_module/board_state_745" BEL "c_module/board_state_744" BEL
+        "c_module/board_state_743" BEL "c_module/board_state_742" BEL
+        "c_module/board_state_741" BEL "c_module/board_state_740" BEL
+        "c_module/board_state_739" BEL "c_module/board_state_738" BEL
+        "c_module/board_state_737" BEL "c_module/board_state_736" BEL
+        "c_module/board_state_735" BEL "c_module/board_state_734" BEL
+        "c_module/board_state_733" BEL "c_module/board_state_732" BEL
+        "c_module/board_state_731" BEL "c_module/board_state_730" BEL
+        "c_module/board_state_729" BEL "c_module/board_state_728" BEL
+        "c_module/board_state_727" BEL "c_module/board_state_726" BEL
+        "c_module/board_state_725" BEL "c_module/board_state_724" BEL
+        "c_module/board_state_723" BEL "c_module/board_state_722" BEL
+        "c_module/board_state_721" BEL "c_module/board_state_720" BEL
+        "c_module/board_state_719" BEL "c_module/board_state_718" BEL
+        "c_module/board_state_717" BEL "c_module/board_state_716" BEL
+        "c_module/board_state_715" BEL "c_module/board_state_714" BEL
+        "c_module/board_state_713" BEL "c_module/board_state_712" BEL
+        "c_module/board_state_711" BEL "c_module/board_state_710" BEL
+        "c_module/board_state_709" BEL "c_module/board_state_708" BEL
+        "c_module/board_state_707" BEL "c_module/board_state_706" BEL
+        "c_module/board_state_705" BEL "c_module/board_state_704" BEL
+        "c_module/board_state_703" BEL "c_module/board_state_702" BEL
+        "c_module/board_state_701" BEL "c_module/board_state_700" BEL
+        "c_module/board_state_699" BEL "c_module/board_state_698" BEL
+        "c_module/board_state_697" BEL "c_module/board_state_696" BEL
+        "c_module/board_state_695" BEL "c_module/board_state_694" BEL
+        "c_module/board_state_693" BEL "c_module/board_state_692" BEL
+        "c_module/board_state_691" BEL "c_module/board_state_690" BEL
+        "c_module/board_state_689" BEL "c_module/board_state_688" BEL
+        "c_module/board_state_687" BEL "c_module/board_state_686" BEL
+        "c_module/board_state_685" BEL "c_module/board_state_684" BEL
+        "c_module/board_state_683" BEL "c_module/board_state_682" BEL
+        "c_module/board_state_681" BEL "c_module/board_state_680" BEL
+        "c_module/board_state_679" BEL "c_module/board_state_678" BEL
+        "c_module/board_state_677" BEL "c_module/board_state_676" BEL
+        "c_module/board_state_675" BEL "c_module/board_state_674" BEL
+        "c_module/board_state_673" BEL "c_module/board_state_672" BEL
+        "c_module/board_state_671" BEL "c_module/board_state_670" BEL
+        "c_module/board_state_669" BEL "c_module/board_state_668" BEL
+        "c_module/board_state_667" BEL "c_module/board_state_666" BEL
+        "c_module/board_state_665" BEL "c_module/board_state_664" BEL
+        "c_module/board_state_663" BEL "c_module/board_state_662" BEL
+        "c_module/board_state_661" BEL "c_module/board_state_660" BEL
+        "c_module/board_state_659" BEL "c_module/board_state_658" BEL
+        "c_module/board_state_657" BEL "c_module/board_state_656" BEL
+        "c_module/board_state_655" BEL "c_module/board_state_654" BEL
+        "c_module/board_state_653" BEL "c_module/board_state_652" BEL
+        "c_module/board_state_651" BEL "c_module/board_state_650" BEL
+        "c_module/board_state_649" BEL "c_module/board_state_648" BEL
+        "c_module/board_state_647" BEL "c_module/board_state_646" BEL
+        "c_module/board_state_645" BEL "c_module/board_state_644" BEL
+        "c_module/board_state_643" BEL "c_module/board_state_642" BEL
+        "c_module/board_state_641" BEL "c_module/board_state_640" BEL
+        "c_module/board_state_639" BEL "c_module/board_state_638" BEL
+        "c_module/board_state_637" BEL "c_module/board_state_636" BEL
+        "c_module/board_state_635" BEL "c_module/board_state_634" BEL
+        "c_module/board_state_633" BEL "c_module/board_state_632" BEL
+        "c_module/board_state_631" BEL "c_module/board_state_630" BEL
+        "c_module/board_state_629" BEL "c_module/board_state_628" BEL
+        "c_module/board_state_627" BEL "c_module/board_state_626" BEL
+        "c_module/board_state_625" BEL "c_module/board_state_624" BEL
+        "c_module/board_state_623" BEL "c_module/board_state_622" BEL
+        "c_module/board_state_621" BEL "c_module/board_state_620" BEL
+        "c_module/board_state_619" BEL "c_module/board_state_618" BEL
+        "c_module/board_state_617" BEL "c_module/board_state_616" BEL
+        "c_module/board_state_615" BEL "c_module/board_state_614" BEL
+        "c_module/board_state_613" BEL "c_module/board_state_612" BEL
+        "c_module/board_state_611" BEL "c_module/board_state_610" BEL
+        "c_module/board_state_609" BEL "c_module/board_state_608" BEL
+        "c_module/board_state_607" BEL "c_module/board_state_606" BEL
+        "c_module/board_state_605" BEL "c_module/board_state_604" BEL
+        "c_module/board_state_603" BEL "c_module/board_state_602" BEL
+        "c_module/board_state_601" BEL "c_module/board_state_600" BEL
+        "c_module/board_state_599" BEL "c_module/board_state_598" BEL
+        "c_module/board_state_597" BEL "c_module/board_state_596" BEL
+        "c_module/board_state_595" BEL "c_module/board_state_594" BEL
+        "c_module/board_state_593" BEL "c_module/board_state_592" BEL
+        "c_module/board_state_591" BEL "c_module/board_state_590" BEL
+        "c_module/board_state_589" BEL "c_module/board_state_588" BEL
+        "c_module/board_state_587" BEL "c_module/board_state_586" BEL
+        "c_module/board_state_585" BEL "c_module/board_state_584" BEL
+        "c_module/board_state_583" BEL "c_module/board_state_582" BEL
+        "c_module/board_state_581" BEL "c_module/board_state_580" BEL
+        "c_module/board_state_579" BEL "c_module/board_state_578" BEL
+        "c_module/board_state_577" BEL "c_module/board_state_576" BEL
+        "c_module/board_state_575" BEL "c_module/board_state_574" BEL
+        "c_module/board_state_573" BEL "c_module/board_state_572" BEL
+        "c_module/board_state_571" BEL "c_module/board_state_570" BEL
+        "c_module/board_state_569" BEL "c_module/board_state_568" BEL
+        "c_module/board_state_567" BEL "c_module/board_state_566" BEL
+        "c_module/board_state_565" BEL "c_module/board_state_564" BEL
+        "c_module/board_state_563" BEL "c_module/board_state_562" BEL
+        "c_module/board_state_561" BEL "c_module/board_state_560" BEL
+        "c_module/board_state_559" BEL "c_module/board_state_558" BEL
+        "c_module/board_state_557" BEL "c_module/board_state_556" BEL
+        "c_module/board_state_555" BEL "c_module/board_state_554" BEL
+        "c_module/board_state_553" BEL "c_module/board_state_552" BEL
+        "c_module/board_state_551" BEL "c_module/board_state_550" BEL
+        "c_module/board_state_549" BEL "c_module/board_state_548" BEL
+        "c_module/board_state_547" BEL "c_module/board_state_546" BEL
+        "c_module/board_state_545" BEL "c_module/board_state_544" BEL
+        "c_module/board_state_543" BEL "c_module/board_state_542" BEL
+        "c_module/board_state_541" BEL "c_module/board_state_540" BEL
+        "c_module/board_state_539" BEL "c_module/board_state_538" BEL
+        "c_module/board_state_537" BEL "c_module/board_state_536" BEL
+        "c_module/board_state_535" BEL "c_module/board_state_534" BEL
+        "c_module/board_state_533" BEL "c_module/board_state_532" BEL
+        "c_module/board_state_531" BEL "c_module/board_state_530" BEL
+        "c_module/board_state_529" BEL "c_module/board_state_528" BEL
+        "c_module/board_state_527" BEL "c_module/board_state_526" BEL
+        "c_module/board_state_525" BEL "c_module/board_state_524" BEL
+        "c_module/board_state_523" BEL "c_module/board_state_522" BEL
+        "c_module/board_state_521" BEL "c_module/board_state_520" BEL
+        "c_module/board_state_519" BEL "c_module/board_state_518" BEL
+        "c_module/board_state_517" BEL "c_module/board_state_516" BEL
+        "c_module/board_state_515" BEL "c_module/board_state_514" BEL
+        "c_module/board_state_513" BEL "c_module/board_state_512" BEL
+        "c_module/board_state_511" BEL "c_module/board_state_510" BEL
+        "c_module/board_state_509" BEL "c_module/board_state_508" BEL
+        "c_module/board_state_507" BEL "c_module/board_state_506" BEL
+        "c_module/board_state_505" BEL "c_module/board_state_504" BEL
+        "c_module/board_state_503" BEL "c_module/board_state_502" BEL
+        "c_module/board_state_501" BEL "c_module/board_state_500" BEL
+        "c_module/board_state_499" BEL "c_module/board_state_498" BEL
+        "c_module/board_state_497" BEL "c_module/board_state_496" BEL
+        "c_module/board_state_495" BEL "c_module/board_state_494" BEL
+        "c_module/board_state_493" BEL "c_module/board_state_492" BEL
+        "c_module/board_state_491" BEL "c_module/board_state_490" BEL
+        "c_module/board_state_489" BEL "c_module/board_state_488" BEL
+        "c_module/board_state_487" BEL "c_module/board_state_486" BEL
+        "c_module/board_state_485" BEL "c_module/board_state_484" BEL
+        "c_module/board_state_483" BEL "c_module/board_state_482" BEL
+        "c_module/board_state_481" BEL "c_module/board_state_480" BEL
+        "c_module/board_state_479" BEL "c_module/board_state_478" BEL
+        "c_module/board_state_477" BEL "c_module/board_state_476" BEL
+        "c_module/board_state_475" BEL "c_module/board_state_474" BEL
+        "c_module/board_state_473" BEL "c_module/board_state_472" BEL
+        "c_module/board_state_471" BEL "c_module/board_state_470" BEL
+        "c_module/board_state_469" BEL "c_module/board_state_468" BEL
+        "c_module/board_state_467" BEL "c_module/board_state_466" BEL
+        "c_module/board_state_465" BEL "c_module/board_state_464" BEL
+        "c_module/board_state_463" BEL "c_module/board_state_462" BEL
+        "c_module/board_state_461" BEL "c_module/board_state_460" BEL
+        "c_module/board_state_459" BEL "c_module/board_state_458" BEL
+        "c_module/board_state_457" BEL "c_module/board_state_456" BEL
+        "c_module/board_state_455" BEL "c_module/board_state_454" BEL
+        "c_module/board_state_453" BEL "c_module/board_state_452" BEL
+        "c_module/board_state_451" BEL "c_module/board_state_450" BEL
+        "c_module/board_state_449" BEL "c_module/board_state_448" BEL
+        "c_module/board_state_447" BEL "c_module/board_state_446" BEL
+        "c_module/board_state_445" BEL "c_module/board_state_444" BEL
+        "c_module/board_state_443" BEL "c_module/board_state_442" BEL
+        "c_module/board_state_441" BEL "c_module/board_state_440" BEL
+        "c_module/board_state_439" BEL "c_module/board_state_438" BEL
+        "c_module/board_state_437" BEL "c_module/board_state_436" BEL
+        "c_module/board_state_435" BEL "c_module/board_state_434" BEL
+        "c_module/board_state_433" BEL "c_module/board_state_432" BEL
+        "c_module/board_state_431" BEL "c_module/board_state_430" BEL
+        "c_module/board_state_429" BEL "c_module/board_state_428" BEL
+        "c_module/board_state_427" BEL "c_module/board_state_426" BEL
+        "c_module/board_state_425" BEL "c_module/board_state_424" BEL
+        "c_module/board_state_423" BEL "c_module/board_state_422" BEL
+        "c_module/board_state_421" BEL "c_module/board_state_420" BEL
+        "c_module/board_state_419" BEL "c_module/board_state_418" BEL
+        "c_module/board_state_417" BEL "c_module/board_state_416" BEL
+        "c_module/board_state_415" BEL "c_module/board_state_414" BEL
+        "c_module/board_state_413" BEL "c_module/board_state_412" BEL
+        "c_module/board_state_411" BEL "c_module/board_state_410" BEL
+        "c_module/board_state_409" BEL "c_module/board_state_408" BEL
+        "c_module/board_state_407" BEL "c_module/board_state_406" BEL
+        "c_module/board_state_405" BEL "c_module/board_state_404" BEL
+        "c_module/board_state_403" BEL "c_module/board_state_402" BEL
+        "c_module/board_state_401" BEL "c_module/board_state_400" BEL
+        "c_module/board_state_399" BEL "c_module/board_state_398" BEL
+        "c_module/board_state_397" BEL "c_module/board_state_396" BEL
+        "c_module/board_state_395" BEL "c_module/board_state_394" BEL
+        "c_module/board_state_393" BEL "c_module/board_state_392" BEL
+        "c_module/board_state_391" BEL "c_module/board_state_390" BEL
+        "c_module/board_state_389" BEL "c_module/board_state_388" BEL
+        "c_module/board_state_387" BEL "c_module/board_state_386" BEL
+        "c_module/board_state_385" BEL "c_module/board_state_384" BEL
+        "c_module/board_state_383" BEL "c_module/board_state_382" BEL
+        "c_module/board_state_381" BEL "c_module/board_state_380" BEL
+        "c_module/board_state_379" BEL "c_module/board_state_378" BEL
+        "c_module/board_state_377" BEL "c_module/board_state_376" BEL
+        "c_module/board_state_375" BEL "c_module/board_state_374" BEL
+        "c_module/board_state_373" BEL "c_module/board_state_372" BEL
+        "c_module/board_state_371" BEL "c_module/board_state_370" BEL
+        "c_module/board_state_369" BEL "c_module/board_state_368" BEL
+        "c_module/board_state_367" BEL "c_module/board_state_366" BEL
+        "c_module/board_state_365" BEL "c_module/board_state_364" BEL
+        "c_module/board_state_363" BEL "c_module/board_state_362" BEL
+        "c_module/board_state_361" BEL "c_module/board_state_360" BEL
+        "c_module/board_state_359" BEL "c_module/board_state_358" BEL
+        "c_module/board_state_357" BEL "c_module/board_state_356" BEL
+        "c_module/board_state_355" BEL "c_module/board_state_354" BEL
+        "c_module/board_state_353" BEL "c_module/board_state_352" BEL
+        "c_module/board_state_351" BEL "c_module/board_state_350" BEL
+        "c_module/board_state_349" BEL "c_module/board_state_348" BEL
+        "c_module/board_state_347" BEL "c_module/board_state_346" BEL
+        "c_module/board_state_345" BEL "c_module/board_state_344" BEL
+        "c_module/board_state_343" BEL "c_module/board_state_342" BEL
+        "c_module/board_state_341" BEL "c_module/board_state_340" BEL
+        "c_module/board_state_339" BEL "c_module/board_state_338" BEL
+        "c_module/board_state_337" BEL "c_module/board_state_336" BEL
+        "c_module/board_state_335" BEL "c_module/board_state_334" BEL
+        "c_module/board_state_333" BEL "c_module/board_state_332" BEL
+        "c_module/board_state_331" BEL "c_module/board_state_330" BEL
+        "c_module/board_state_329" BEL "c_module/board_state_328" BEL
+        "c_module/board_state_327" BEL "c_module/board_state_326" BEL
+        "c_module/board_state_325" BEL "c_module/board_state_324" BEL
+        "c_module/board_state_323" BEL "c_module/board_state_322" BEL
+        "c_module/board_state_321" BEL "c_module/board_state_320" BEL
+        "c_module/board_state_319" BEL "c_module/board_state_318" BEL
+        "c_module/board_state_317" BEL "c_module/board_state_316" BEL
+        "c_module/board_state_315" BEL "c_module/board_state_314" BEL
+        "c_module/board_state_313" BEL "c_module/board_state_312" BEL
+        "c_module/board_state_311" BEL "c_module/board_state_310" BEL
+        "c_module/board_state_309" BEL "c_module/board_state_308" BEL
+        "c_module/board_state_307" BEL "c_module/board_state_306" BEL
+        "c_module/board_state_305" BEL "c_module/board_state_304" BEL
+        "c_module/board_state_303" BEL "c_module/board_state_302" BEL
+        "c_module/board_state_301" BEL "c_module/board_state_300" BEL
+        "c_module/board_state_299" BEL "c_module/board_state_298" BEL
+        "c_module/board_state_297" BEL "c_module/board_state_296" BEL
+        "c_module/board_state_295" BEL "c_module/board_state_294" BEL
+        "c_module/board_state_293" BEL "c_module/board_state_292" BEL
+        "c_module/board_state_291" BEL "c_module/board_state_290" BEL
+        "c_module/board_state_289" BEL "c_module/board_state_288" BEL
+        "c_module/board_state_287" BEL "c_module/board_state_286" BEL
+        "c_module/board_state_285" BEL "c_module/board_state_284" BEL
+        "c_module/board_state_283" BEL "c_module/board_state_282" BEL
+        "c_module/board_state_281" BEL "c_module/board_state_280" BEL
+        "c_module/board_state_279" BEL "c_module/board_state_278" BEL
+        "c_module/board_state_277" BEL "c_module/board_state_276" BEL
+        "c_module/board_state_275" BEL "c_module/board_state_274" BEL
+        "c_module/board_state_273" BEL "c_module/board_state_272" BEL
+        "c_module/board_state_271" BEL "c_module/board_state_270" BEL
+        "c_module/board_state_269" BEL "c_module/board_state_268" BEL
+        "c_module/board_state_267" BEL "c_module/board_state_266" BEL
+        "c_module/board_state_265" BEL "c_module/board_state_264" BEL
+        "c_module/board_state_263" BEL "c_module/board_state_262" BEL
+        "c_module/board_state_261" BEL "c_module/board_state_260" BEL
+        "c_module/board_state_259" BEL "c_module/board_state_258" BEL
+        "c_module/board_state_257" BEL "c_module/board_state_256" BEL
+        "c_module/board_state_255" BEL "c_module/board_state_254" BEL
+        "c_module/board_state_253" BEL "c_module/board_state_252" BEL
+        "c_module/board_state_251" BEL "c_module/board_state_250" BEL
+        "c_module/board_state_249" BEL "c_module/board_state_248" BEL
+        "c_module/board_state_247" BEL "c_module/board_state_246" BEL
+        "c_module/board_state_245" BEL "c_module/board_state_244" BEL
+        "c_module/board_state_243" BEL "c_module/board_state_242" BEL
+        "c_module/board_state_241" BEL "c_module/board_state_240" BEL
+        "c_module/board_state_239" BEL "c_module/board_state_238" BEL
+        "c_module/board_state_237" BEL "c_module/board_state_236" BEL
+        "c_module/board_state_235" BEL "c_module/board_state_234" BEL
+        "c_module/board_state_233" BEL "c_module/board_state_232" BEL
+        "c_module/board_state_231" BEL "c_module/board_state_230" BEL
+        "c_module/board_state_229" BEL "c_module/board_state_228" BEL
+        "c_module/board_state_227" BEL "c_module/board_state_226" BEL
+        "c_module/board_state_225" BEL "c_module/board_state_224" BEL
+        "c_module/board_state_223" BEL "c_module/board_state_222" BEL
+        "c_module/board_state_221" BEL "c_module/board_state_220" BEL
+        "c_module/board_state_219" BEL "c_module/board_state_218" BEL
+        "c_module/board_state_217" BEL "c_module/board_state_216" BEL
+        "c_module/board_state_215" BEL "c_module/board_state_214" BEL
+        "c_module/board_state_213" BEL "c_module/board_state_212" BEL
+        "c_module/board_state_211" BEL "c_module/board_state_210" BEL
+        "c_module/board_state_209" BEL "c_module/board_state_208" BEL
+        "c_module/board_state_207" BEL "c_module/board_state_206" BEL
+        "c_module/board_state_205" BEL "c_module/board_state_204" BEL
+        "c_module/board_state_203" BEL "c_module/board_state_202" BEL
+        "c_module/board_state_201" BEL "c_module/board_state_200" BEL
+        "c_module/board_state_199" BEL "c_module/board_state_198" BEL
+        "c_module/board_state_197" BEL "c_module/board_state_196" BEL
+        "c_module/board_state_195" BEL "c_module/board_state_194" BEL
+        "c_module/board_state_193" BEL "c_module/board_state_192" BEL
+        "c_module/board_state_191" BEL "c_module/board_state_190" BEL
+        "c_module/board_state_189" BEL "c_module/board_state_188" BEL
+        "c_module/board_state_187" BEL "c_module/board_state_186" BEL
+        "c_module/board_state_185" BEL "c_module/board_state_184" BEL
+        "c_module/board_state_183" BEL "c_module/board_state_182" BEL
+        "c_module/board_state_181" BEL "c_module/board_state_180" BEL
+        "c_module/board_state_179" BEL "c_module/board_state_178" BEL
+        "c_module/board_state_177" BEL "c_module/board_state_176" BEL
+        "c_module/board_state_175" BEL "c_module/board_state_174" BEL
+        "c_module/board_state_173" BEL "c_module/board_state_172" BEL
+        "c_module/board_state_171" BEL "c_module/board_state_170" BEL
+        "c_module/board_state_169" BEL "c_module/board_state_168" BEL
+        "c_module/board_state_167" BEL "c_module/board_state_166" BEL
+        "c_module/board_state_165" BEL "c_module/board_state_164" BEL
+        "c_module/board_state_163" BEL "c_module/board_state_162" BEL
+        "c_module/board_state_161" BEL "c_module/board_state_160" BEL
+        "c_module/board_state_159" BEL "c_module/board_state_158" BEL
+        "c_module/board_state_157" BEL "c_module/board_state_156" BEL
+        "c_module/board_state_155" BEL "c_module/board_state_154" BEL
+        "c_module/board_state_153" BEL "c_module/board_state_152" BEL
+        "c_module/board_state_151" BEL "c_module/board_state_150" BEL
+        "c_module/board_state_149" BEL "c_module/board_state_148" BEL
+        "c_module/board_state_147" BEL "c_module/board_state_146" BEL
+        "c_module/board_state_145" BEL "c_module/board_state_144" BEL
+        "c_module/board_state_143" BEL "c_module/board_state_142" BEL
+        "c_module/board_state_141" BEL "c_module/board_state_140" BEL
+        "c_module/board_state_139" BEL "c_module/board_state_138" BEL
+        "c_module/board_state_137" BEL "c_module/board_state_136" BEL
+        "c_module/board_state_135" BEL "c_module/board_state_134" BEL
+        "c_module/board_state_133" BEL "c_module/board_state_132" BEL
+        "c_module/board_state_131" BEL "c_module/board_state_130" BEL
+        "c_module/board_state_129" BEL "c_module/board_state_128" BEL
+        "c_module/board_state_127" BEL "c_module/board_state_126" BEL
+        "c_module/board_state_125" BEL "c_module/board_state_124" BEL
+        "c_module/board_state_123" BEL "c_module/board_state_122" BEL
+        "c_module/board_state_121" BEL "c_module/board_state_120" BEL
+        "c_module/board_state_119" BEL "c_module/board_state_118" BEL
+        "c_module/board_state_117" BEL "c_module/board_state_116" BEL
+        "c_module/board_state_115" BEL "c_module/board_state_114" BEL
+        "c_module/board_state_113" BEL "c_module/board_state_112" BEL
+        "c_module/board_state_111" BEL "c_module/board_state_110" BEL
+        "c_module/board_state_109" BEL "c_module/board_state_108" BEL
+        "c_module/board_state_107" BEL "c_module/board_state_106" BEL
+        "c_module/board_state_105" BEL "c_module/board_state_104" BEL
+        "c_module/board_state_103" BEL "c_module/board_state_102" BEL
+        "c_module/board_state_101" BEL "c_module/board_state_100" BEL
+        "c_module/board_state_99" BEL "c_module/board_state_98" BEL
+        "c_module/board_state_97" BEL "c_module/board_state_96" BEL
+        "c_module/board_state_95" BEL "c_module/board_state_94" BEL
+        "c_module/board_state_93" BEL "c_module/board_state_92" BEL
+        "c_module/board_state_91" BEL "c_module/board_state_90" BEL
+        "c_module/board_state_89" BEL "c_module/board_state_88" BEL
+        "c_module/board_state_87" BEL "c_module/board_state_86" BEL
+        "c_module/board_state_85" BEL "c_module/board_state_84" BEL
+        "c_module/board_state_83" BEL "c_module/board_state_82" BEL
+        "c_module/board_state_81" BEL "c_module/board_state_80" BEL
+        "c_module/board_state_79" BEL "c_module/board_state_78" BEL
+        "c_module/board_state_77" BEL "c_module/board_state_76" BEL
+        "c_module/board_state_75" BEL "c_module/board_state_74" BEL
+        "c_module/board_state_73" BEL "c_module/board_state_72" BEL
+        "c_module/board_state_71" BEL "c_module/board_state_70" BEL
+        "c_module/board_state_69" BEL "c_module/board_state_68" BEL
+        "c_module/board_state_67" BEL "c_module/board_state_66" BEL
+        "c_module/board_state_65" BEL "c_module/board_state_64" BEL
+        "c_module/board_state_63" BEL "c_module/board_state_62" BEL
+        "c_module/board_state_61" BEL "c_module/board_state_60" BEL
+        "c_module/board_state_59" BEL "c_module/board_state_58" BEL
+        "c_module/board_state_57" BEL "c_module/board_state_56" BEL
+        "c_module/board_state_55" BEL "c_module/board_state_54" BEL
+        "c_module/board_state_53" BEL "c_module/board_state_52" BEL
+        "c_module/board_state_51" BEL "c_module/board_state_50" BEL
+        "c_module/board_state_49" BEL "c_module/board_state_48" BEL
+        "c_module/board_state_47" BEL "c_module/board_state_46" BEL
+        "c_module/board_state_45" BEL "c_module/board_state_44" BEL
+        "c_module/board_state_43" BEL "c_module/board_state_42" BEL
+        "c_module/board_state_41" BEL "c_module/board_state_40" BEL
+        "c_module/board_state_39" BEL "c_module/board_state_38" BEL
+        "c_module/board_state_37" BEL "c_module/board_state_36" BEL
+        "c_module/board_state_35" BEL "c_module/board_state_34" BEL
+        "c_module/board_state_33" BEL "c_module/board_state_32" BEL
+        "c_module/board_state_31" BEL "c_module/board_state_30" BEL
+        "c_module/board_state_29" BEL "c_module/board_state_28" BEL
+        "c_module/board_state_27" BEL "c_module/board_state_26" BEL
+        "c_module/board_state_25" BEL "c_module/board_state_24" BEL
+        "c_module/board_state_23" BEL "c_module/board_state_22" BEL
+        "c_module/board_state_21" BEL "c_module/board_state_20" BEL
+        "c_module/board_state_19" BEL "c_module/board_state_18" BEL
+        "c_module/board_state_17" BEL "c_module/board_state_16" BEL
+        "c_module/board_state_15" BEL "c_module/board_state_14" BEL
+        "c_module/board_state_13" BEL "c_module/board_state_12" BEL
+        "c_module/board_state_11" BEL "c_module/board_state_10" BEL
+        "c_module/board_state_9" BEL "c_module/board_state_8" BEL
+        "c_module/board_state_7" BEL "c_module/board_state_6" BEL
+        "c_module/board_state_5" BEL "c_module/board_state_4" BEL
+        "c_module/board_state_3" BEL "c_module/board_state_2" BEL
+        "c_module/board_state_1" BEL "c_module/board_state_0" BEL
+        "c_module/prev_sw_0" BEL "c_module/old_rank_2_1" BEL
+        "c_module/old_rank_0_1" BEL "c_module/old_rank_1_1" BEL
+        "c_module/old_rank_2_2" BEL "c_module/old_rank_0_2" BEL
+        "c_module/old_file_0_1" BEL "c_module/old_file_1_1" BEL
+        "c_module/old_file_2_1" BEL "clk_BUFGP/BUFG" BEL "Mshreg_stepU_1" BEL
+        "stepU_1" BEL "Mshreg_stepL_1" BEL "stepL_1" BEL "Mshreg_stepS_1" BEL
+        "stepS_1" BEL "Mshreg_stepD_1" BEL "stepD_1" BEL "Mshreg_stepR_1" BEL
+        "stepR_1" PIN "uart_top_/tfifo_/Mram_mem_pins<32>" PIN
+        "uart_top_/tfifo_/Mram_mem_pins<33>";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

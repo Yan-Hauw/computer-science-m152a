@@ -1,0 +1,3 @@
+vhdtdtfi -lang verilog -prj lab5group4final -o C:/Users/Student/Documents/dhb/lab5group4final/Check_Checker.tfi -lib work C:/Users/Student/Documents/dhb/lab5group4final/logic//check_checker.v -module Check_Checker -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work C:/Users/Student/Documents/dhb/lab5group4final/logic/check_checker.v -lang verilog -prj lab5group4final -o Check_Checker.spl -module Check_Checker -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 Check_Checker.spl C:/Users/Student/Documents/dhb/lab5group4final/Check_Checker.sym 

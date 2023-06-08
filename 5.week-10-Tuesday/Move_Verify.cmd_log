@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/Student/Documents/dhb/lab5group4final/Move_Verify.xst" -ofn "C:/Users/Student/Documents/dhb/lab5group4final/Move_Verify.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Move_Verify.ngc Move_Verify_synthesis.v 

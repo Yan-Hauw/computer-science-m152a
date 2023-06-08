@@ -1,0 +1,8 @@
+verilog work "logic/white_pawn_attack.v"
+verilog work "logic/positions_all.v"
+verilog work "logic/line_attack.v"
+verilog work "logic/knight_attack.v"
+verilog work "logic/king_attack.v"
+verilog work "logic/diagonal_attack.v"
+verilog work "logic/black_pawn_attack.v"
+verilog work "logic/check_checker.v"

@@ -1,0 +1,596 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: Castling_Checker.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Castling_Checker.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Castling_Checker"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : Castling_Checker
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\white_pawn_attack.v" into library work
+Parsing module <White_Pawn_Attack>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\positions_white.v" into library work
+Parsing module <White_Position>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\positions_black.v" into library work
+Parsing module <Black_Position>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\positions_all.v" into library work
+Parsing module <All_Position>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\knight_attack.v" into library work
+Parsing module <Knight_Attack>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\king_attack.v" into library work
+Parsing module <King_Attack>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\black_pawn_attack.v" into library work
+Parsing module <Black_Pawn_Attack>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\complete_attack_set.v" into library work
+Parsing module <Complete_Attack_Set>.
+Analyzing Verilog file "C:\Users\Student\Documents\dhb\lab5group4final\logic\castling_checker.v" into library work
+Parsing module <Castling_Checker>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Castling_Checker>.
+
+Elaborating module <All_Position>.
+
+Elaborating module <Complete_Attack_Set>.
+WARNING:HDLCompiler:413 - "C:\Users\Student\Documents\dhb\lab5group4final\logic\complete_attack_set.v" Line 25: Result of 32-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <King_Attack>.
+
+Elaborating module <Knight_Attack>.
+
+Elaborating module <Black_Pawn_Attack>.
+
+Elaborating module <White_Pawn_Attack>.
+
+Elaborating module <Black_Position>.
+
+Elaborating module <White_Position>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Castling_Checker>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\castling_checker.v".
+    Found 11-bit subtractor for signal <n4968> created at line 55.
+    Found 11-bit subtractor for signal <n4972> created at line 58.
+    Found 32-bit adder for signal <n1737> created at line 55.
+    Found 32-bit adder for signal <n1742> created at line 58.
+    Found 64-bit shifter logical left for signal <o_o_check> created at line 24
+    Found 64-bit shifter logical left for signal <o_o_o_check> created at line 25
+    Found 64-bit shifter logical left for signal <o_o_empty> created at line 29
+    Found 64-bit shifter logical left for signal <o_o_o_empty> created at line 30
+    Found 1472-bit shifter logical right for signal <n4970> created at line 55
+    Found 64-bit shifter logical left for signal <GND_1_o_GND_1_o_shift_left_26_OUT> created at line 55
+    Found 1472-bit shifter logical right for signal <n4974> created at line 58
+    Found 64-bit shifter logical left for signal <GND_1_o_GND_1_o_shift_left_34_OUT> created at line 58
+    Found 64-bit shifter logical left for signal <GND_1_o_GND_1_o_shift_left_39_OUT> created at line 63
+    Found 1472-bit shifter logical right for signal <n4978> created at line 64
+    Found 64-bit shifter logical left for signal <GND_1_o_GND_1_o_shift_left_882_OUT> created at line 65
+    Found 1472-bit shifter logical left for signal <n4969> created at line 55
+    Found 1472-bit shifter logical left for signal <n4973> created at line 58
+    Found 1472-bit shifter logical left for signal <n4977> created at line 64
+    Found 3-bit comparator greater for signal <is_short_castling> created at line 22
+    Found 32-bit comparator equal for signal <GND_1_o_GND_1_o_equal_18_o> created at line 51
+    Found 32-bit comparator equal for signal <GND_1_o_GND_1_o_equal_20_o> created at line 51
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+	inferred 1676 Multiplexer(s).
+	inferred  14 Combinational logic shifter(s).
+Unit <Castling_Checker> synthesized.
+
+Synthesizing Unit <All_Position>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\positions_all.v".
+    Summary:
+	no macro.
+Unit <All_Position> synthesized.
+
+Synthesizing Unit <Complete_Attack_Set>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\complete_attack_set.v".
+    Found 4-bit adder for signal <index_offset[3]_GND_4_o_add_1_OUT> created at line 27.
+    Found 4-bit adder for signal <index_offset[3]_GND_4_o_add_3_OUT> created at line 28.
+    Found 4-bit adder for signal <index_offset[3]_GND_4_o_add_5_OUT> created at line 35.
+    Found 4-bit adder for signal <index_offset[3]_GND_4_o_add_76_OUT> created at line 40.
+    Found 4-bit adder for signal <index_offset[3]_GND_4_o_add_143_OUT> created at line 45.
+    Found 1472-bit shifter logical right for signal <n0256> created at line 27
+    Found 1472-bit shifter logical right for signal <n0258> created at line 28
+    Found 1472-bit shifter logical right for signal <n0260> created at line 35
+    Found 1472-bit shifter logical right for signal <n0316> created at line 40
+    Found 1472-bit shifter logical right for signal <n0373> created at line 45
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred   2 Multiplexer(s).
+	inferred   5 Combinational logic shifter(s).
+Unit <Complete_Attack_Set> synthesized.
+
+Synthesizing Unit <King_Attack>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\king_attack.v".
+    Summary:
+	no macro.
+Unit <King_Attack> synthesized.
+
+Synthesizing Unit <Knight_Attack>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\knight_attack.v".
+    Summary:
+	no macro.
+Unit <Knight_Attack> synthesized.
+
+Synthesizing Unit <Black_Pawn_Attack>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\black_pawn_attack.v".
+WARNING:Xst:647 - Input <black_pawns<6:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <Black_Pawn_Attack> synthesized.
+
+Synthesizing Unit <White_Pawn_Attack>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\white_pawn_attack.v".
+WARNING:Xst:647 - Input <white_pawns<63:57>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <White_Pawn_Attack> synthesized.
+
+Synthesizing Unit <Black_Position>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\positions_black.v".
+WARNING:Xst:647 - Input <piece_bitboards_flattened<767:384>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <Black_Position> synthesized.
+
+Synthesizing Unit <White_Position>.
+    Related source file is "C:\Users\Student\Documents\dhb\lab5group4final\logic\positions_white.v".
+WARNING:Xst:647 - Input <piece_bitboards_flattened<383:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <White_Position> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 9
+ 11-bit subtractor                                     : 2
+ 32-bit adder                                          : 2
+ 4-bit adder                                           : 5
+# Comparators                                          : 3
+ 3-bit comparator greater                              : 1
+ 32-bit comparator equal                               : 2
+# Multiplexers                                         : 1678
+ 1-bit 2-to-1 multiplexer                              : 8
+ 10-bit 2-to-1 multiplexer                             : 4
+ 11-bit 2-to-1 multiplexer                             : 4
+ 12-bit 2-to-1 multiplexer                             : 4
+ 13-bit 2-to-1 multiplexer                             : 4
+ 14-bit 2-to-1 multiplexer                             : 4
+ 15-bit 2-to-1 multiplexer                             : 4
+ 16-bit 2-to-1 multiplexer                             : 4
+ 17-bit 2-to-1 multiplexer                             : 4
+ 18-bit 2-to-1 multiplexer                             : 4
+ 19-bit 2-to-1 multiplexer                             : 4
+ 2-bit 2-to-1 multiplexer                              : 4
+ 20-bit 2-to-1 multiplexer                             : 4
+ 21-bit 2-to-1 multiplexer                             : 4
+ 22-bit 2-to-1 multiplexer                             : 4
+ 23-bit 2-to-1 multiplexer                             : 4
+ 24-bit 2-to-1 multiplexer                             : 4
+ 25-bit 2-to-1 multiplexer                             : 4
+ 26-bit 2-to-1 multiplexer                             : 4
+ 27-bit 2-to-1 multiplexer                             : 4
+ 28-bit 2-to-1 multiplexer                             : 4
+ 29-bit 2-to-1 multiplexer                             : 4
+ 3-bit 2-to-1 multiplexer                              : 4
+ 30-bit 2-to-1 multiplexer                             : 4
+ 31-bit 2-to-1 multiplexer                             : 4
+ 32-bit 2-to-1 multiplexer                             : 4
+ 33-bit 2-to-1 multiplexer                             : 4
+ 34-bit 2-to-1 multiplexer                             : 4
+ 35-bit 2-to-1 multiplexer                             : 4
+ 36-bit 2-to-1 multiplexer                             : 4
+ 37-bit 2-to-1 multiplexer                             : 4
+ 38-bit 2-to-1 multiplexer                             : 4
+ 39-bit 2-to-1 multiplexer                             : 4
+ 4-bit 2-to-1 multiplexer                              : 4
+ 40-bit 2-to-1 multiplexer                             : 4
+ 41-bit 2-to-1 multiplexer                             : 4
+ 42-bit 2-to-1 multiplexer                             : 4
+ 43-bit 2-to-1 multiplexer                             : 4
+ 44-bit 2-to-1 multiplexer                             : 4
+ 45-bit 2-to-1 multiplexer                             : 4
+ 46-bit 2-to-1 multiplexer                             : 4
+ 47-bit 2-to-1 multiplexer                             : 4
+ 48-bit 2-to-1 multiplexer                             : 4
+ 49-bit 2-to-1 multiplexer                             : 4
+ 5-bit 2-to-1 multiplexer                              : 4
+ 50-bit 2-to-1 multiplexer                             : 4
+ 51-bit 2-to-1 multiplexer                             : 4
+ 52-bit 2-to-1 multiplexer                             : 4
+ 53-bit 2-to-1 multiplexer                             : 4
+ 54-bit 2-to-1 multiplexer                             : 4
+ 55-bit 2-to-1 multiplexer                             : 4
+ 56-bit 2-to-1 multiplexer                             : 4
+ 57-bit 2-to-1 multiplexer                             : 4
+ 58-bit 2-to-1 multiplexer                             : 4
+ 59-bit 2-to-1 multiplexer                             : 4
+ 6-bit 2-to-1 multiplexer                              : 4
+ 60-bit 2-to-1 multiplexer                             : 4
+ 61-bit 2-to-1 multiplexer                             : 4
+ 62-bit 2-to-1 multiplexer                             : 4
+ 63-bit 2-to-1 multiplexer                             : 4
+ 64-bit 2-to-1 multiplexer                             : 1422
+ 7-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 4
+ 9-bit 2-to-1 multiplexer                              : 4
+# Logic shifters                                       : 19
+ 1472-bit shifter logical left                         : 3
+ 1472-bit shifter logical right                        : 8
+ 64-bit shifter logical left                           : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 9
+ 11-bit subtractor                                     : 2
+ 4-bit adder                                           : 5
+ 5-bit adder                                           : 2
+# Comparators                                          : 3
+ 3-bit comparator greater                              : 1
+ 32-bit comparator equal                               : 2
+# Multiplexers                                         : 1678
+ 1-bit 2-to-1 multiplexer                              : 8
+ 10-bit 2-to-1 multiplexer                             : 4
+ 11-bit 2-to-1 multiplexer                             : 4
+ 12-bit 2-to-1 multiplexer                             : 4
+ 13-bit 2-to-1 multiplexer                             : 4
+ 14-bit 2-to-1 multiplexer                             : 4
+ 15-bit 2-to-1 multiplexer                             : 4
+ 16-bit 2-to-1 multiplexer                             : 4
+ 17-bit 2-to-1 multiplexer                             : 4
+ 18-bit 2-to-1 multiplexer                             : 4
+ 19-bit 2-to-1 multiplexer                             : 4
+ 2-bit 2-to-1 multiplexer                              : 4
+ 20-bit 2-to-1 multiplexer                             : 4
+ 21-bit 2-to-1 multiplexer                             : 4
+ 22-bit 2-to-1 multiplexer                             : 4
+ 23-bit 2-to-1 multiplexer                             : 4
+ 24-bit 2-to-1 multiplexer                             : 4
+ 25-bit 2-to-1 multiplexer                             : 4
+ 26-bit 2-to-1 multiplexer                             : 4
+ 27-bit 2-to-1 multiplexer                             : 4
+ 28-bit 2-to-1 multiplexer                             : 4
+ 29-bit 2-to-1 multiplexer                             : 4
+ 3-bit 2-to-1 multiplexer                              : 4
+ 30-bit 2-to-1 multiplexer                             : 4
+ 31-bit 2-to-1 multiplexer                             : 4
+ 32-bit 2-to-1 multiplexer                             : 4
+ 33-bit 2-to-1 multiplexer                             : 4
+ 34-bit 2-to-1 multiplexer                             : 4
+ 35-bit 2-to-1 multiplexer                             : 4
+ 36-bit 2-to-1 multiplexer                             : 4
+ 37-bit 2-to-1 multiplexer                             : 4
+ 38-bit 2-to-1 multiplexer                             : 4
+ 39-bit 2-to-1 multiplexer                             : 4
+ 4-bit 2-to-1 multiplexer                              : 4
+ 40-bit 2-to-1 multiplexer                             : 4
+ 41-bit 2-to-1 multiplexer                             : 4
+ 42-bit 2-to-1 multiplexer                             : 4
+ 43-bit 2-to-1 multiplexer                             : 4
+ 44-bit 2-to-1 multiplexer                             : 4
+ 45-bit 2-to-1 multiplexer                             : 4
+ 46-bit 2-to-1 multiplexer                             : 4
+ 47-bit 2-to-1 multiplexer                             : 4
+ 48-bit 2-to-1 multiplexer                             : 4
+ 49-bit 2-to-1 multiplexer                             : 4
+ 5-bit 2-to-1 multiplexer                              : 4
+ 50-bit 2-to-1 multiplexer                             : 4
+ 51-bit 2-to-1 multiplexer                             : 4
+ 52-bit 2-to-1 multiplexer                             : 4
+ 53-bit 2-to-1 multiplexer                             : 4
+ 54-bit 2-to-1 multiplexer                             : 4
+ 55-bit 2-to-1 multiplexer                             : 4
+ 56-bit 2-to-1 multiplexer                             : 4
+ 57-bit 2-to-1 multiplexer                             : 4
+ 58-bit 2-to-1 multiplexer                             : 4
+ 59-bit 2-to-1 multiplexer                             : 4
+ 6-bit 2-to-1 multiplexer                              : 4
+ 60-bit 2-to-1 multiplexer                             : 4
+ 61-bit 2-to-1 multiplexer                             : 4
+ 62-bit 2-to-1 multiplexer                             : 4
+ 63-bit 2-to-1 multiplexer                             : 4
+ 64-bit 2-to-1 multiplexer                             : 1422
+ 7-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 4
+ 9-bit 2-to-1 multiplexer                              : 4
+# Logic shifters                                       : 19
+ 1472-bit shifter logical left                         : 3
+ 1472-bit shifter logical right                        : 8
+ 64-bit shifter logical left                           : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Castling_Checker> ...
+
+Optimizing unit <All_Position> ...
+
+Optimizing unit <Complete_Attack_Set> ...
+
+Optimizing unit <Black_Position> ...
+
+Optimizing unit <White_Position> ...
+
+Optimizing unit <Black_Pawn_Attack> ...
+
+Optimizing unit <White_Pawn_Attack> ...
+
+Optimizing unit <King_Attack> ...
+
+Optimizing unit <Knight_Attack> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Castling_Checker, actual ratio is 6.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Castling_Checker.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 680
+#      INV                         : 1
+#      LUT2                        : 70
+#      LUT3                        : 123
+#      LUT4                        : 142
+#      LUT5                        : 110
+#      LUT6                        : 232
+#      MUXF7                       : 2
+# IO Buffers                       : 1550
+#      IBUF                        : 781
+#      OBUF                        : 769
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                  678  out of   9112     7%  
+    Number used as Logic:               678  out of   9112     7%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    678
+   Number with an unused Flip Flop:     678  out of    678   100%  
+   Number with an unused LUT:             0  out of    678     0%  
+   Number of fully used LUT-FF pairs:     0  out of    678     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                        1550
+ Number of bonded IOBs:                1550  out of    232   668% (*) 
+
+Specific Feature Utilization:
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 19.341ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 444709 / 769
+-------------------------------------------------------------------------
+Delay:               19.341ns (Levels of Logic = 14)
+  Source:            is_white (PAD)
+  Destination:       new_piece_bitboards_flattened<378> (PAD)
+
+  Data Path: is_white to new_piece_bitboards_flattened<378>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           141   1.222   1.984  is_white_IBUF (Madd_n1737_Madd_cy<2>)
+     INV:I->O            215   0.206   2.286  Sh1861_INV_0 (Sh186)
+     begin scope: 'cas:is_white'
+     LUT3:I0->O            3   0.205   0.995  Sh139651 (Sh13965)
+     begin scope: 'cas/k1:king<13>'
+     LUT5:I0->O            1   0.203   0.944  king_attack<5>1 (king_attack<5>)
+     end scope: 'cas/k1:king_attack<5>'
+     LUT6:I0->O            1   0.203   0.924  Mmux_attack_set569 (Mmux_attack_set568)
+     LUT5:I0->O            1   0.203   0.827  Mmux_attack_set5615_SW0 (N20)
+     LUT6:I2->O            1   0.203   0.580  Mmux_attack_set5615 (attack_set<5>)
+     end scope: 'cas:attack_set<5>'
+     LUT5:I4->O            1   0.205   0.808  new_piece_bitboards_flattened<192>26 (new_piece_bitboards_flattened<192>26)
+     LUT6:I3->O           69   0.205   1.673  new_piece_bitboards_flattened<192>27 (new_piece_bitboards_flattened<192>27)
+     LUT6:I5->O           67   0.205   1.907  new_piece_bitboards_flattened<192>212 (new_piece_bitboards_flattened<192>2)
+     LUT4:I0->O            1   0.203   0.579  Mmux_castling_is_valid11 (castling_is_valid_OBUF)
+     OBUF:I->O                 2.571          castling_is_valid_OBUF (castling_is_valid)
+    ----------------------------------------
+    Total                     19.341ns (5.834ns logic, 13.507ns route)
+                                       (30.2% logic, 69.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 84.00 secs
+Total CPU time to Xst completion: 83.57 secs
+ 
+--> 
+
+Total memory usage is 5041692 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

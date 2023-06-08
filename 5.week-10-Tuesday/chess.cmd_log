@@ -1,0 +1,8 @@
+vhdtdtfi -lang verilog -prj lab5group4final -o C:/Users/Student/Documents/dhb/lab5group4final/chess.tfi -lib work C:/Users/Student/Documents/dhb/lab5group4final//chess.v -module chess -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj lab5group4final -o C:/Users/Student/Documents/dhb/lab5group4final/chess.tfi -lib work C:/Users/Student/Documents/dhb/lab5group4final//chess.v -module chess -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work C:/Users/Student/Documents/dhb/lab5group4final/chess.v -lang verilog -prj lab5group4final -o chess.spl -module chess -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 chess.spl C:/Users/Student/Documents/dhb/lab5group4final/chess.sym 
+vhdtdtfi -lib work C:/Users/Student/Documents/dhb/lab5group4final/chess.v -lang verilog -prj lab5group4final -o chess.spl -module chess -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 chess.spl C:/Users/Student/Documents/dhb/lab5group4final/chess.sym 
+vhdtdtfi -lang verilog -prj lab5group4final -o C:/Users/Student/Documents/dhb/lab5group4final/chess.tfi -lib work C:/Users/Student/Documents/dhb/lab5group4final//chess.v -module chess -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+xst -intstyle ise -ifn "C:/Users/Student/Documents/dhb/lab5group4final/chess.xst" -ofn "C:/Users/Student/Documents/dhb/lab5group4final/chess.syr" 

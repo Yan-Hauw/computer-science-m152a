@@ -1,0 +1,9 @@
+[Inputs]
+is_white
+=piece_bitboards_flattened[767:0]=
+[Outputs]
+is_in_check
+[BiDir]
+[ATTRIBUTES]
+VeriModel Check_Checker
+
